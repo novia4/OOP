@@ -12,9 +12,9 @@ import java.util.Date;
  * @author Nashir
  */
 public class Petugas {
-    private String nama;
-    private String nomorHp;
-    private Date tanggal;
+    protected String nama;
+    protected String nomorHp;
+    protected Date tanggal;
 
     /**
      * @return the nama

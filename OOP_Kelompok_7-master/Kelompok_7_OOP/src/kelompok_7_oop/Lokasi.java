@@ -9,7 +9,7 @@ package kelompok_7_oop;
  *
  * @author Nashir
  */
-public class Tempat {
+public class Lokasi {
     private String negaraAtauProv;
     private String kabKota;
 
