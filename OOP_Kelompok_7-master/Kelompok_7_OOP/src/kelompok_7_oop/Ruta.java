@@ -9,13 +9,6 @@ package kelompok_7_oop;
  *
  * @author Nashir
  */
-public class Kelompok_7_OOP {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Ruta {
     
 }
