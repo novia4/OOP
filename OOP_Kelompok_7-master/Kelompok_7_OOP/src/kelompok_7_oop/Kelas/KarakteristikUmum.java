@@ -3,14 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kelompok_7_oop;
+package kelompok_7_oop.Kelas;
 
 /**
  *
  * @author USER-PC
  */
 public class KarakteristikUmum {
-
+    
+    private String ijazahTerakhir;
+    private String jurusan;
+    private String pernahPelatihan;
+    private String kewarganegaraan;
+    Lokasi tptTigl5thnLalu;
+//    Gangguan gangguanFisik;
+    
+    
     /**
      * @return the ijazahTerakhir
      */
@@ -66,13 +74,5 @@ public class KarakteristikUmum {
     public void setKewarganegaraan(String kewarganegaraan) {
         this.kewarganegaraan = kewarganegaraan;
     }
-    
-    private String ijazahTerakhir;
-    private String jurusan;
-    private String pernahPelatihan;
-    private String kewarganegaraan;
-    Lokasi tptTigl5thnLalu;
-    Gangguan gangguanFisik;
-    
-    
+
 }

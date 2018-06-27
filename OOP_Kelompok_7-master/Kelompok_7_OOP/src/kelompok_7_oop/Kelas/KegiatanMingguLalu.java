@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kelompok_7_oop;
+package kelompok_7_oop.Kelas;
 
 import java.util.ArrayList;
 
