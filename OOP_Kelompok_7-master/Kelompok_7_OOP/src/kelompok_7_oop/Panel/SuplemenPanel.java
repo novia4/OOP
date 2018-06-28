@@ -122,6 +122,11 @@ public class SuplemenPanel extends javax.swing.JPanel {
 
         statusKddknComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
         statusKddknComboBox.setSelectedIndex(-1);
+        statusKddknComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusKddknComboBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -253,6 +258,10 @@ public class SuplemenPanel extends javax.swing.JPanel {
     private void kegiatanLainCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kegiatanLainCheckBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_kegiatanLainCheckBoxActionPerformed
+
+    private void statusKddknComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusKddknComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusKddknComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
