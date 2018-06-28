@@ -27,19 +27,260 @@ public class SuplemenPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        sediaJasaButtonGroup = new javax.swing.ButtonGroup();
+        kerjaMinKumButtonGroup = new javax.swing.ButtonGroup();
+        biasaKerjaKumButtonGroup = new javax.swing.ButtonGroup();
+        judulAPanel = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        menyediakanJasaPositiveRadioButton = new javax.swing.JRadioButton();
+        menyediakanJasaNegativeRadioButton = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        produksiPakaiSendiriCheckBox = new javax.swing.JCheckBox();
+        magangTanpaUpahCheckBox = new javax.swing.JCheckBox();
+        relawanCheckBox = new javax.swing.JCheckBox();
+        kegiatanLainCheckBox = new javax.swing.JCheckBox();
+        jLabel9 = new javax.swing.JLabel();
+        kerjaKumulatifNegativeRadioButton = new javax.swing.JRadioButton();
+        kerjaKumulatifPositiveRadioButton = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        biasaKerjaKumNegativeRadioButton = new javax.swing.JRadioButton();
+        biasaKerjaKumPositiveRadioButton = new javax.swing.JRadioButton();
+        jLabel11 = new javax.swing.JLabel();
+        pilihKegUtamaComboBox = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        bidangUsahaTextField = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jenisPekerjaanTextField = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        statusKddknComboBox = new javax.swing.JComboBox<>();
+
+        judulAPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        judulAPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        judulAPanel.setText("V.H. SUPLEMEN");
+
+        jLabel7.setText("Menyediakan jasa yang hasilnya dipakai sendiri:");
+
+        sediaJasaButtonGroup.add(menyediakanJasaPositiveRadioButton);
+        menyediakanJasaPositiveRadioButton.setText("Ya");
+
+        sediaJasaButtonGroup.add(menyediakanJasaNegativeRadioButton);
+        menyediakanJasaNegativeRadioButton.setText("Tidak");
+
+        jLabel8.setText("Selama sebulan lalu:");
+
+        produksiPakaiSendiriCheckBox.setText("Memproduksi barang/jasa untuk digunakan sendiri");
+        produksiPakaiSendiriCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                produksiPakaiSendiriCheckBoxActionPerformed(evt);
+            }
+        });
+
+        magangTanpaUpahCheckBox.setText("Magang tanpa upah/penghasilan");
+        magangTanpaUpahCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                magangTanpaUpahCheckBoxActionPerformed(evt);
+            }
+        });
+
+        relawanCheckBox.setText("Melakukan pekerjaan sukarela/relawan");
+        relawanCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                relawanCheckBoxActionPerformed(evt);
+            }
+        });
+
+        kegiatanLainCheckBox.setText("Melakukan kegiatan seperti (kerja akti, ronda, dll)");
+        kegiatanLainCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kegiatanLainCheckBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Bekerja minimal satu jam kumulatif dalam seminggu lalu:");
+
+        kerjaMinKumButtonGroup.add(kerjaKumulatifNegativeRadioButton);
+        kerjaKumulatifNegativeRadioButton.setText("Tidak");
+
+        kerjaMinKumButtonGroup.add(kerjaKumulatifPositiveRadioButton);
+        kerjaKumulatifPositiveRadioButton.setText("Ya");
+
+        jLabel10.setText("Kegiatan mana yang merupakan kegiatan utama:");
+
+        biasaKerjaKumButtonGroup.add(biasaKerjaKumNegativeRadioButton);
+        biasaKerjaKumNegativeRadioButton.setText("Tidak");
+
+        biasaKerjaKumButtonGroup.add(biasaKerjaKumPositiveRadioButton);
+        biasaKerjaKumPositiveRadioButton.setText("Ya");
+
+        jLabel11.setText("<html>Biasanya bekerja minimal satu jam kumulatif dalam<br>seminggu lalu:</html>");
+
+        jLabel12.setText("Lapangan usaha/bidang usaha pekerjaan selama seminggu lalu:");
+
+        jLabel13.setText("Jenis pekerjaan/jabatan pekerjaan selama seminggu lalu:");
+
+        jLabel14.setText("Status kedudukan dalam pekerjaan selama seminggu lalu:");
+
+        statusKddknComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
+        statusKddknComboBox.setSelectedIndex(-1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(judulAPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel12)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(menyediakanJasaPositiveRadioButton)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(menyediakanJasaNegativeRadioButton))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(kerjaKumulatifPositiveRadioButton)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(kerjaKumulatifNegativeRadioButton))
+                                            .addComponent(magangTanpaUpahCheckBox)
+                                            .addComponent(produksiPakaiSendiriCheckBox)
+                                            .addComponent(relawanCheckBox)
+                                            .addComponent(kegiatanLainCheckBox)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(biasaKerjaKumPositiveRadioButton)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(biasaKerjaKumNegativeRadioButton))
+                                            .addComponent(pilihKegUtamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel14))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(judulAPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(menyediakanJasaPositiveRadioButton)
+                    .addComponent(menyediakanJasaNegativeRadioButton))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(produksiPakaiSendiriCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(magangTanpaUpahCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(relawanCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kegiatanLainCheckBox)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kerjaKumulatifPositiveRadioButton)
+                    .addComponent(kerjaKumulatifNegativeRadioButton))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(biasaKerjaKumPositiveRadioButton)
+                    .addComponent(biasaKerjaKumNegativeRadioButton))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pilihKegUtamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void produksiPakaiSendiriCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produksiPakaiSendiriCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_produksiPakaiSendiriCheckBoxActionPerformed
+
+    private void magangTanpaUpahCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_magangTanpaUpahCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_magangTanpaUpahCheckBoxActionPerformed
+
+    private void relawanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_relawanCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_relawanCheckBoxActionPerformed
+
+    private void kegiatanLainCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kegiatanLainCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kegiatanLainCheckBoxActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup biasaKerjaKumButtonGroup;
+    private javax.swing.JRadioButton biasaKerjaKumNegativeRadioButton;
+    private javax.swing.JRadioButton biasaKerjaKumPositiveRadioButton;
+    private javax.swing.JTextField bidangUsahaTextField;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jenisPekerjaanTextField;
+    private javax.swing.JLabel judulAPanel;
+    private javax.swing.JCheckBox kegiatanLainCheckBox;
+    private javax.swing.JRadioButton kerjaKumulatifNegativeRadioButton;
+    private javax.swing.JRadioButton kerjaKumulatifPositiveRadioButton;
+    private javax.swing.ButtonGroup kerjaMinKumButtonGroup;
+    private javax.swing.JCheckBox magangTanpaUpahCheckBox;
+    private javax.swing.JRadioButton menyediakanJasaNegativeRadioButton;
+    private javax.swing.JRadioButton menyediakanJasaPositiveRadioButton;
+    private javax.swing.JComboBox<String> pilihKegUtamaComboBox;
+    private javax.swing.JCheckBox produksiPakaiSendiriCheckBox;
+    private javax.swing.JCheckBox relawanCheckBox;
+    private javax.swing.ButtonGroup sediaJasaButtonGroup;
+    private javax.swing.JComboBox<String> statusKddknComboBox;
     // End of variables declaration//GEN-END:variables
 }
