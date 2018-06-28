@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package kelompok_7_oop;
+package kelompok_7_oop.Kelas;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Gangguan {
     private String komunikasi;
     private String lainnya;
     
-    public String getPenglihatan{
+    public String getPenglihatan(){
         return penglihatan;    
     }
     
@@ -26,7 +26,7 @@ public class Gangguan {
         this.penglihatan = penglihatan;
     }
     
-    public String getPendengaran{
+    public String getPendengaran(){
         return pendengaran;    
     }
     
@@ -34,7 +34,7 @@ public class Gangguan {
         this.pendengaran = pendengaran;
     }
     
-    public String getMobilitas{
+    public String getMobilitas(){
         return mobilitas;    
     }
     
@@ -42,7 +42,7 @@ public class Gangguan {
         this.mobilitas = mobilitas;
     }
     
-    public String getGerakkanJariAtauTngn{
+    public String getGerakkanJariAtauTngn(){
         return gerakkanJariAtauTngn;    
     }
     
@@ -50,7 +50,7 @@ public class Gangguan {
         this.gerakkanJariAtauTngn = gerakkanJariAtauTngn;
     }
     
-    public String getKomunikasi{
+    public String getKomunikasi(){
         return komunikasi;    
     }
     
@@ -59,7 +59,7 @@ public class Gangguan {
     }
     
     
-    public String getLainnya{
+    public String getLainnya(){
         return lainnya;    
     }
     

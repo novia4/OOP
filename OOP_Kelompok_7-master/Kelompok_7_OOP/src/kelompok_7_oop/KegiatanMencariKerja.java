@@ -6,6 +6,8 @@
 
 package kelompok_7_oop;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ACER
@@ -23,7 +25,7 @@ public class KegiatanMencariKerja {
     private String inginPekerjaan;
     private Array upah;
     
-    public String getMencariKerja{
+    public String getMencariKerja(){
         return mencariKerja;    
     }
     
@@ -31,7 +33,7 @@ public class KegiatanMencariKerja {
         this.mencariKerja = mencariKerja;
     }
     
-    public String getMempersiapkanUsaha{
+    public String getMempersiapkanUsaha(){
         return mempersiapkanUsaha;    
     }
     
@@ -39,7 +41,7 @@ public class KegiatanMencariKerja {
         this.mempersiapkanUsaha = mempersiapkanUsaha;
     }
     
-    public int getLamaMencariKerja{
+    public int getLamaMencariKerja(){
         return lamaMencariKerja;    
     }
     
@@ -47,31 +49,31 @@ public class KegiatanMencariKerja {
         this.lamaMencariKerja = lamaMencariKerja;
     }
     
-      public ArrayList getAlasanMencariKerja{
+      public ArrayList getAlasanMencariKerja(){
         return alasanMencariKerja;    
     }
     
     public void setAlasanMencariKerja(String alasanMencariKerja) {
-        this.alasanMencariKerja = alasanMencariKerja;
+        this.alasanMencariKerja.add(alasanMencariKerja);
     }
     
-      public ArrayList getUpayaMencariKerja{
+      public ArrayList getUpayaMencariKerja(){
         return upayaMencariKerja;    
     }
     
     public void setUpayaMencariKerja(String upayaMencariKerja) {
-        this.upayaMencariKerja = upayaMencariKerja;
+        this.upayaMencariKerja.add(upayaMencariKerja);
     }
     
-      public ArrayList getAlasanTdkMencariKerja{
-        return alasanTdkMencariKerja;    
+      public ArrayList getAlasanTdkMencariKerja(){
+        return alasanTdkMncariKerja;    
     }
     
     public void setAlasanTdkMencariKerja(String alasanTdkMencariKerja) {
-        this.alasanTdkMencariKerja = alasanTdkMencariKerja;
+        this.alasanTdkMncariKerja.add(alasanTdkMencariKerja);
     }
     
-    public String getMulaiPekerjaan{
+    public String getMulaiPekerjaan(){
         return mulaiPekerjaan;    
     }
     
@@ -79,7 +81,7 @@ public class KegiatanMencariKerja {
         this.mulaiUsaha = mulaiUsaha;
     }
     
-    public String getMenerimaTawaran{
+    public String getMenerimaTawaran(){
         return menerimaTawaran;    
     }
     
@@ -87,7 +89,7 @@ public class KegiatanMencariKerja {
         this.menerimaTawaran = menerimaTawaran;
     }
     
-      public String getSiapKerja{
+      public String getSiapKerja(){
         return siapKerja;    
     }
     
@@ -95,7 +97,7 @@ public class KegiatanMencariKerja {
         this.siapKerja = siapKerja;
     }
     
-      public String getInginPekerjaan{
+      public String getInginPekerjaan(){
         return inginPekerjaan;    
     }
     
@@ -103,7 +105,7 @@ public class KegiatanMencariKerja {
         this.inginPekerjaan = inginPekerjaan;
     }
     
-       public Array getUpah{
+       public Array getUpah(){
         return upah;    
     }
     
