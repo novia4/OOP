@@ -38,8 +38,6 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         jaminanKembaliBekerjabuttonGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -90,10 +88,6 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
 
         jLabel2.setText("5.a. Selama seminggu yang lalu : ");
 
-        jLabel3.setText("YA");
-
-        jLabel4.setText("TIDAK");
-
         jLabel5.setText("1. Apakah (NAMA) bekerja?");
 
         jLabel6.setText("2. Apakah (NAMA) sekolah? ");
@@ -113,7 +107,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         jLabel12.setText("  b. Dari kegiatan 1 s.d. 4 yang menyatakan \"Ya\" diatas, kegiatan apakah ");
 
         bekerja_buttonGroup.add(positifBekerjaRadioButton);
-        positifBekerjaRadioButton.setText("1");
+        positifBekerjaRadioButton.setText("Ya");
         positifBekerjaRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 positifBekerjaRadioButtonActionPerformed(evt);
@@ -121,7 +115,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         bekerja_buttonGroup.add(negatifBekerjaRadioButton);
-        negatifBekerjaRadioButton.setText("2");
+        negatifBekerjaRadioButton.setText("Tidak");
         negatifBekerjaRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 negatifBekerjaRadioButtonActionPerformed(evt);
@@ -129,7 +123,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         sekolah_buttonGroup.add(positifSekolahRadioButton);
-        positifSekolahRadioButton.setText("3");
+        positifSekolahRadioButton.setText("Ya");
         positifSekolahRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 positifSekolahRadioButtonActionPerformed(evt);
@@ -137,7 +131,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         sekolah_buttonGroup.add(negatifSekolahRadioButton);
-        negatifSekolahRadioButton.setText("4");
+        negatifSekolahRadioButton.setText("Tidak");
         negatifSekolahRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 negatifSekolahRadioButtonActionPerformed(evt);
@@ -145,7 +139,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         mengurusRT_buttonGroup.add(negatifMengurusRTRadioButton);
-        negatifMengurusRTRadioButton.setText("2");
+        negatifMengurusRTRadioButton.setText("Tidak");
         negatifMengurusRTRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 negatifMengurusRTRadioButtonActionPerformed(evt);
@@ -153,7 +147,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         mengurusRT_buttonGroup.add(positifMengurusRTRadioButton);
-        positifMengurusRTRadioButton.setText("1");
+        positifMengurusRTRadioButton.setText("Ya");
         positifMengurusRTRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 positifMengurusRTRadioButtonActionPerformed(evt);
@@ -161,7 +155,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         kegiatanLain_buttonGroup.add(negatifKegiatanLainRadioButton);
-        negatifKegiatanLainRadioButton.setText("4");
+        negatifKegiatanLainRadioButton.setText("Tidak");
         negatifKegiatanLainRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 negatifKegiatanLainRadioButtonActionPerformed(evt);
@@ -169,7 +163,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         });
 
         kegiatanLain_buttonGroup.add(positifKegiatanLainRadioButton);
-        positifKegiatanLainRadioButton.setText("3");
+        positifKegiatanLainRadioButton.setText("Ya");
         positifKegiatanLainRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 positifKegiatanLainRadioButtonActionPerformed(evt);
@@ -293,56 +287,6 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(negatifTidakBekerjaRadioButton)
                 .addGap(58, 58, 58))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jLabel9))
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel8)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(136, 136, 136)
-                            .addComponent(jLabel13)
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jLabel11))
-                                .addComponent(jLabel10))
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jLabel14)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(kegWktTerbanyak_1RadioButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel16)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel15)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(kegWktTerbanyak_2RadioButton)
-                                    .addGap(40, 40, 40)
-                                    .addComponent(kegWktTerbanyak_3RadioButton)
-                                    .addGap(41, 41, 41)
-                                    .addComponent(kegWktTerbanyak_4RadioButton)
-                                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -385,40 +329,83 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
                         .addComponent(positifJaminanKmblKerjaRadioButton)
                         .addGap(120, 120, 120)
                         .addComponent(negatifJaminanKmblKerjaRadioButton))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(352, 352, 352)
+                            .addGap(40, 40, 40)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel7)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(10, 10, 10)
+                                    .addComponent(jLabel9))
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel8)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(positifBekerjaRadioButton)
-                                    .addGap(9, 9, 9)
-                                    .addComponent(negatifBekerjaRadioButton))
+                                    .addComponent(jLabel14)
+                                    .addGap(0, 0, Short.MAX_VALUE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(26, 26, 26)
-                                    .addComponent(jLabel4))
-                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(40, 40, 40)
+                                    .addComponent(kegWktTerbanyak_1RadioButton)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel16)
+                                            .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel15)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(kegWktTerbanyak_2RadioButton)
+                                            .addGap(40, 40, 40)
+                                            .addComponent(kegWktTerbanyak_3RadioButton)
+                                            .addGap(41, 41, 41)
+                                            .addComponent(kegWktTerbanyak_4RadioButton))))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addComponent(jLabel13)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(positifBekerjaRadioButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(negatifBekerjaRadioButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(positifSekolahRadioButton)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(negatifSekolahRadioButton))
-                                .addGroup(layout.createSequentialGroup()
                                     .addComponent(positifMengurusRTRadioButton)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(negatifMengurusRTRadioButton))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(positifKegiatanLainRadioButton)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(negatifKegiatanLainRadioButton))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                    .addComponent(positifKegiatanLainRadioButton))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(negatifSekolahRadioButton)
+                                    .addComponent(negatifMengurusRTRadioButton)
+                                    .addComponent(negatifKegiatanLainRadioButton))))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel11))
+                            .addComponent(jLabel10))))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,10 +413,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -437,29 +421,33 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
                     .addComponent(jLabel13)
                     .addComponent(negatifBekerjaRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(positifSekolahRadioButton)
-                    .addComponent(negatifSekolahRadioButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(positifMengurusRTRadioButton)
-                    .addComponent(negatifMengurusRTRadioButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(positifKegiatanLainRadioButton)
-                        .addComponent(negatifKegiatanLainRadioButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(positifSekolahRadioButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)))
-                .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(positifMengurusRTRadioButton))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(positifKegiatanLainRadioButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel9))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(negatifSekolahRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(negatifMengurusRTRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(negatifKegiatanLainRadioButton)))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
@@ -598,8 +586,6 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

@@ -5,6 +5,8 @@
  */
 package kelompok_7_oop.Panel;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
@@ -19,29 +21,40 @@ import kelompok_7_oop.Kelas.KarakteristikUmum;
  * @author Nashir
  */
 public class KarakteristikUmumPanel extends javax.swing.JPanel {
+
     private JScrollPane mainScrollPane;
     private AnggotaRuta art;
     private KarakteristikUmum kU = new KarakteristikUmum();
+
     /**
      * Creates new form KarakteristikUmumPanel
      */
     public KarakteristikUmumPanel(JScrollPane mainScrollPane, AnggotaRuta art) {
         initComponents();
-        this.mainScrollPane=mainScrollPane;
+        this.mainScrollPane = mainScrollPane;
         this.art = art;
+        ijazahComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (ijazahComboBox.getSelectedIndex() <= 7) {
+                    bidangStudiTextField.setEditable(false);
+                }
+            }
+        });
     }
-    
-    private String getSelected(ButtonGroup bg){
-        for (Enumeration<AbstractButton> buttons=bg.getElements();buttons.hasMoreElements();){
+
+    private String getSelected(ButtonGroup bg) {
+        for (Enumeration<AbstractButton> buttons = bg.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
-            
-            if(button.isSelected()){
+
+            if (button.isSelected()) {
                 return button.getText();
             }
         }
         return "tidak valid";
     }
     private Gangguan gangguan = new Gangguan();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -572,7 +585,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
 
     private void buttonNextPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonNextPanelMouseClicked
         // TODO add your handling code here:
-        
+
         gangguan.setPenglihatan(getSelected(penglihatanButtonGroup));
         gangguan.setPenglihatan(getSelected(pendengaranButtonGroup));
         gangguan.setKomunikasi(getSelected(caraKomunikasiButtonGroup));
@@ -581,16 +594,14 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         gangguan.setLainnya(getSelected(linnyaButtonGroup));
         kU.setGangguan(gangguan);
         kU.setIjazahTerakhir(ijazahComboBox.getSelectedItem().toString());
-        if(ijazahComboBox.getSelectedIndex()<=7){
-            bidangStudiTextField.setEditable(false);
-        }
+
         kU.setJurusan(bidangStudiTextField.getText());
         kU.setKewarganegaraan(kewarganegaraanTextField1.getText());
         kU.setPernahPelatihan(getSelected(pelatihanKerjaButtonGroup));
         kU.setNegaraAtauProv(provinsiTextField.getText());
         kU.setKabKota(kabKotaTextField.getText());
         art.setKarakteristikUmum(kU);
-        
+
         mainScrollPane.setViewportView(new KegiatanSemingguYangLalu_Panel());
     }//GEN-LAST:event_buttonNextPanelMouseClicked
 
