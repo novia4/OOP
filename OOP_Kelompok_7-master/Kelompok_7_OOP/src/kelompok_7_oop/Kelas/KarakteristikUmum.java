@@ -17,7 +17,6 @@ public class KarakteristikUmum extends Lokasi{
     private String kewarganegaraan;
     Lokasi tptTigl5thnLalu;
     private Gangguan gangguan;
-    private KegiatanMingguLalu kegiatan = new KegiatanMingguLalu();
     
     public Gangguan getGangguan(){
         return gangguan;
@@ -82,17 +81,5 @@ public class KarakteristikUmum extends Lokasi{
         this.gangguan = gg;
     }
 
-    /**
-     * @return the kegiatan
-     */
-    public KegiatanMingguLalu getKegiatan() {
-        return kegiatan;
-    }
 
-    /**
-     * @param kegiatan the kegiatan to set
-     */
-    public void setKegiatan(KegiatanMingguLalu kegiatan) {
-        this.kegiatan = kegiatan;
-    }
 }

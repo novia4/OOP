@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import kelompok_7_oop.Kelas.AnggotaRuta;
@@ -25,7 +26,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
     private JScrollPane mainScrollPane;
     private AnggotaRuta art;
     private KarakteristikUmum kU = new KarakteristikUmum();
-
+    private boolean flag = true;
     /**
      * Creates new form KarakteristikUmumPanel
      */
@@ -38,6 +39,9 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             public void actionPerformed(ActionEvent e) {
                 if (ijazahComboBox.getSelectedIndex() <= 7) {
                     bidangStudiTextField.setEditable(false);
+                    flag = false;
+                }else{
+                    bidangStudiTextField.setEditable(true);
                 }
             }
         });
@@ -119,7 +123,6 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         jLabel2.setText("1.a. Apakah ijazah STTB yang dimiliki (Nama)?");
 
         ijazahComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tidak punya ijazah SD", "Paket A", "SDLB", "SD/MI", "Paket B", "SMPLB", "SMP/MTs", "Paket C", "SMLB", "SMA/MA", "SMK/MAK", "Diploma I/II", "Diploma III", "Diploma IV/S1", "S2", "S3" }));
-        ijazahComboBox.setSelectedIndex(-1);
         ijazahComboBox.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
                 ijazahComboBoxComponentAdded(evt);
@@ -302,6 +305,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonNextPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonNextPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 buttonNextPanelMouseClicked(evt);
@@ -592,14 +596,20 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         gangguan.setMobilitas(getSelected(mobilitasButtonGroup));
         gangguan.setGerakkanJariAtauTngn(getSelected(gerakanJariButtonGroup));
         gangguan.setLainnya(getSelected(linnyaButtonGroup));
-        kU.setGangguan(gangguan);
-        kU.setIjazahTerakhir(ijazahComboBox.getSelectedItem().toString());
 
-        kU.setJurusan(bidangStudiTextField.getText());
+        kU.setGangguan(gangguan);
+
+        kU.setIjazahTerakhir(ijazahComboBox.getSelectedItem().toString());
+        if (flag == true){
+            kU.setJurusan(bidangStudiTextField.getText());
+        }else{
+             kU.setJurusan("");           
+        }
         kU.setKewarganegaraan(kewarganegaraanTextField1.getText());
         kU.setPernahPelatihan(getSelected(pelatihanKerjaButtonGroup));
         kU.setNegaraAtauProv(provinsiTextField.getText());
         kU.setKabKota(kabKotaTextField.getText());
+
         art.setKarakteristikUmum(kU);
 
         mainScrollPane.setViewportView(new KegiatanSemingguYangLalu_Panel(mainScrollPane, art));

@@ -289,7 +289,6 @@
             <StringItem index="15" value="S3"/>
           </StringArray>
         </Property>
-        <Property name="selectedIndex" type="int" value="-1"/>
       </Properties>
       <Events>
         <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="ijazahComboBoxComponentAdded"/>
@@ -576,6 +575,11 @@
       </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="buttonNextPanel">
+      <Properties>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonNextPanelMouseClicked"/>
       </Events>

@@ -18,7 +18,15 @@ import java.util.logging.Logger;
  * @author USER-PC
  */
 public class AnggotaRuta {
-
+    private String nama;
+    private String hubunganDgKRT;
+    private String gender;
+    private int bulanLahir;
+    private int tahunLahir;
+    private String statKawin;
+    private String statSekolah;
+    private KarakteristikUmum karateristikUmum;
+    private KegiatanMingguLalu mingguLalu;
     /**
      * @return the nama
      */
@@ -125,33 +133,14 @@ public class AnggotaRuta {
         return time;
     }
     public KarakteristikUmum getKarakteristikUmum(){
-        return this.karateristikUmum;
+        return karateristikUmum;
+    }
+    
+    public void setKegiatanMingguLalu(KegiatanMingguLalu km){
+        this.mingguLalu = km;
     }
     public void setKarakteristikUmum(KarakteristikUmum ku){
         this.karateristikUmum=ku;
     }
-    
-    private String nama;
-    private String hubunganDgKRT;
-    private String gender;
-    private int bulanLahir;
-    private int tahunLahir;
-    private String statKawin;
-    private String statSekolah;
-    private KarakteristikUmum karateristikUmum = new KarakteristikUmum();
-    private KegiatanMingguLalu mingguLalu = new KegiatanMingguLalu();
 
-    /**
-     * @return the mingguLalu
-     */
-    public KegiatanMingguLalu getKegiatanMingguLalu() {
-        return mingguLalu;
-    }
-
-    /**
-     * @param mingguLalu the mingguLalu to set
-     */
-    public void setKegiatanMingguLalu(KegiatanMingguLalu mingguLalu) {
-        this.mingguLalu = mingguLalu;
-    }
 }
