@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Suplemen {
     private String penyediaJasa;
     private ArrayList<String> kegiatanBulanLalu = new ArrayList();
+    
     private String kerjaKumulatif;
     private String kumulatifMinSejam;
     private String kegiatanUtama;
@@ -21,6 +22,11 @@ public class Suplemen {
     private String jenisJabatan;
     private String statJabatan;
 
+    
+    public void addKegiatanBulanLalu(String kegiatanBulanLalu){
+        this.kegiatanBulanLalu.add(kegiatanBulanLalu);
+    }
+    
     /**
      * @return the penyediaJasa
      */

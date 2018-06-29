@@ -5,19 +5,39 @@
  */
 package kelompok_7_oop.Panel;
 
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JScrollPane;
+import kelompok_7_oop.Kelas.AnggotaRuta;
+import kelompok_7_oop.Kelas.Suplemen;
+
 /**
  *
  * @author Nashir
  */
 public class SuplemenPanel extends javax.swing.JPanel {
-
+   
+    private  Suplemen su = new Suplemen();
+    private JScrollPane mainScrollPane;
     /**
      * Creates new form SuplemenPanel
      */
     public SuplemenPanel() {
         initComponents();
+        this.mainScrollPane = mainScrollPane;
+        
     }
-
+ private String getSelected(ButtonGroup bg){
+        for (Enumeration<AbstractButton> buttons=bg.getElements();buttons.hasMoreElements();){
+            AbstractButton button = buttons.nextElement();
+            
+            if(button.isSelected()){
+                return button.getText();
+            }
+        }
+        return "tidak valid";
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,13 +66,15 @@ public class SuplemenPanel extends javax.swing.JPanel {
         biasaKerjaKumNegativeRadioButton = new javax.swing.JRadioButton();
         biasaKerjaKumPositiveRadioButton = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
-        pilihKegUtamaComboBox = new javax.swing.JComboBox<>();
+        pilihKegUtamaComboBox = new javax.swing.JComboBox<String>();
         jLabel12 = new javax.swing.JLabel();
         bidangUsahaTextField = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jenisPekerjaanTextField = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        statusKddknComboBox = new javax.swing.JComboBox<>();
+        statusKddknComboBox = new javax.swing.JComboBox<String>();
+        buttonNextPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         judulAPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         judulAPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -120,7 +142,7 @@ public class SuplemenPanel extends javax.swing.JPanel {
 
         jLabel14.setText("Status kedudukan dalam pekerjaan selama seminggu lalu:");
 
-        statusKddknComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
+        statusKddknComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
         statusKddknComboBox.setSelectedIndex(-1);
         statusKddknComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,12 +150,48 @@ public class SuplemenPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonNextPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonNextPanelMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout buttonNextPanelLayout = new javax.swing.GroupLayout(buttonNextPanel);
+        buttonNextPanel.setLayout(buttonNextPanelLayout);
+        buttonNextPanelLayout.setHorizontalGroup(
+            buttonNextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonNextPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
+        buttonNextPanelLayout.setVerticalGroup(
+            buttonNextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonNextPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,29 +224,16 @@ public class SuplemenPanel extends javax.swing.JPanel {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(biasaKerjaKumNegativeRadioButton))
                                             .addComponent(pilihKegUtamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
+                                .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(jLabel14)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel14))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,17 +274,23 @@ public class SuplemenPanel extends javax.swing.JPanel {
                 .addComponent(pilihKegUtamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bidangUsahaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jenisPekerjaanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(statusKddknComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(23, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,12 +314,41 @@ public class SuplemenPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_statusKddknComboBoxActionPerformed
 
+    private void buttonNextPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonNextPanelMouseClicked
+               // TODO add your handling code here:
+        
+       
+        
+        su.setPenyediaJasa(getSelected(sediaJasaButtonGroup));
+        if(produksiPakaiSendiriCheckBox.isSelected()){
+            su.addKegiatanBulanLalu(produksiPakaiSendiriCheckBox.getText());
+        }
+        if(magangTanpaUpahCheckBox.isSelected()){
+            su.addKegiatanBulanLalu(magangTanpaUpahCheckBox.getText());
+        }
+        if(relawanCheckBox.isSelected()){
+            su.addKegiatanBulanLalu(relawanCheckBox.getText());
+        }
+        if(kegiatanLainCheckBox.isSelected()){
+            su.addKegiatanBulanLalu(kegiatanLainCheckBox.getText());    
+        }
+        su.setKerjaKumulatif(getSelected(kerjaMinKumButtonGroup));
+        su.setKumulatifMinSejam(getSelected(biasaKerjaKumButtonGroup));
+        su.setKegiatanUtama((String) pilihKegUtamaComboBox.getSelectedItem());
+        su.setBidangPekerjaan(bidangUsahaTextField.getText());
+        su.setJenisJabatan(jenisPekerjaanTextField.getText());
+        su.setStatJabatan(statusKddknComboBox.getSelectedItem().toString());
+     
+    }//GEN-LAST:event_buttonNextPanelMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup biasaKerjaKumButtonGroup;
     private javax.swing.JRadioButton biasaKerjaKumNegativeRadioButton;
     private javax.swing.JRadioButton biasaKerjaKumPositiveRadioButton;
     private javax.swing.JTextField bidangUsahaTextField;
+    private javax.swing.JPanel buttonNextPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
