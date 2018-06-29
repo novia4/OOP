@@ -5,12 +5,17 @@
  */
 package kelompok_7_oop.Panel;
 
+import javax.swing.ButtonGroup;
+import kelompok_7_oop.Kelas.PengalamanKerja;
+
 /**
  *
  * @author Nashir
  */
 public class PengalamanKerjaPanel extends javax.swing.JPanel {
 
+    PengalamanKerja pengalamanKerja = new PengalamanKerja();
+    
     /**
      * Creates new form PengalamanKerjaPanel
      */
@@ -38,22 +43,23 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
         berhentiKerjaNegatifRadioButton = new javax.swing.JRadioButton();
         berhentiKerjaPositifRadioButton = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        alasanBerhentiKerjaComboBox = new javax.swing.JComboBox<>();
         alasanBerhentiKerjaTextField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         bidangUsahaBrhntiTextField = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        bidangUsahaComboBox = new javax.swing.JComboBox<>();
+        statusUsahaComboBox = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         luarNegeriNegatifRadioButton = new javax.swing.JRadioButton();
         luarNegeriPositifRadioButton = new javax.swing.JRadioButton();
         pernahDiLuarNegeriTextField = new javax.swing.JTextField();
+        nextButton = new javax.swing.JButton();
 
         judulAPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         judulAPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         judulAPanel.setText("V.G. PENGALAMAN KERJA");
 
-        jLabel7.setText("Jumlah jam kerja keseluruhan pekerjaan:");
+        jLabel7.setText("Apakah pernah memiliki perkerjaan sebelumnya?");
 
         punyaPekerjaanButtonGroup.add(punyaPekerjaanPositifRadioButton);
         punyaPekerjaanPositifRadioButton.setText("Ya");
@@ -71,8 +77,13 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
 
         jLabel9.setText("Alasan utama berhenti bekerja selama setahun terakhir:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PHK", "Usaha terhenti/bangkrut", "Pendapatan kurang memuaskan", "Tidak cocok dengan lingkungan kerja", "Habis masa kerja/kontrak", "Tidak sesuai dengan keterampilan diri", "Hamil", "Mengurus rumah tangga", "Lainnya" }));
-        jComboBox1.setSelectedIndex(-1);
+        alasanBerhentiKerjaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PHK", "Usaha terhenti/bangkrut", "Pendapatan kurang memuaskan", "Tidak cocok dengan lingkungan kerja", "Habis masa kerja/kontrak", "Tidak sesuai dengan keterampilan diri", "Hamil", "Mengurus rumah tangga", "Lainnya" }));
+        alasanBerhentiKerjaComboBox.setSelectedIndex(-1);
+        alasanBerhentiKerjaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alasanBerhentiKerjaComboBoxActionPerformed(evt);
+            }
+        });
 
         alasanBerhentiKerjaTextField.setEditable(false);
         alasanBerhentiKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -89,9 +100,14 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setText("Bidang usaha/lapangan usaha sebelum berhenti:");
+        jLabel11.setText("Status atau kedudukan di usaha sebelum berhenti:");
 
-        bidangUsahaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
+        statusUsahaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
+        statusUsahaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusUsahaComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel12.setText("Pernah bekerja diluar negeri lima tahun terakhir:");
 
@@ -108,6 +124,13 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
             }
         });
 
+        nextButton.setText("NEXT");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,15 +140,15 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(punyaPekerjaanPositifRadioButton)
-                                .addGap(18, 18, 18)
-                                .addComponent(punyaPekerjaanNegatifRadioButton)
-                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(judulAPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(punyaPekerjaanPositifRadioButton)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(punyaPekerjaanNegatifRadioButton))
+                                    .addComponent(jLabel7))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -142,9 +165,9 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                                         .addComponent(luarNegeriPositifRadioButton)
                                         .addGap(18, 18, 18)
                                         .addComponent(luarNegeriNegatifRadioButton))
-                                    .addComponent(bidangUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(statusUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bidangUsahaBrhntiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(alasanBerhentiKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(berhentiKerjaPositifRadioButton)
                                         .addGap(18, 18, 18)
@@ -152,6 +175,10 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                                     .addComponent(alasanBerhentiKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(pernahDiLuarNegeriTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,7 +200,7 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(alasanBerhentiKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(alasanBerhentiKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -181,9 +208,9 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bidangUsahaBrhntiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel11)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bidangUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(statusUsahaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -192,7 +219,9 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
                     .addComponent(luarNegeriNegatifRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pernahDiLuarNegeriTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -208,16 +237,50 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_pernahDiLuarNegeriTextFieldActionPerformed
 
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        // TODO add your handling code here:
+        
+        if(punyaPekerjaanPositifRadioButton.isSelected()){
+            pengalamanKerja.setPekerjaanSebelumnya("pernah memiliki pekerjaan sebelumnay");
+        } else if (punyaPekerjaanNegatifRadioButton.isSelected()){
+            pengalamanKerja.setPekerjaanSebelumnya("tidak pernah memiliki pekerjaan sebelunya");
+        }
+        
+        if(berhentiKerjaPositifRadioButton.isSelected()){
+            pengalamanKerja.setPernahBerhentiBekerja("pernah berhenti bekerja");
+        } else if (berhentiKerjaNegatifRadioButton.isSelected()){
+            pengalamanKerja.setPernahBerhentiBekerja("tidak pernah berhenti bekerja");
+        }
+        
+        pengalamanKerja.setAlasanBerhentiBekerja((String) alasanBerhentiKerjaComboBox.getSelectedItem());
+        if((String) alasanBerhentiKerjaComboBox.getSelectedItem() == "Lainnya"){
+            pengalamanKerja.setAlasanBerhentiBekerja(alasanBerhentiKerjaTextField.getText());
+        }
+        
+        pengalamanKerja.setLapUsahaTerakhir(bidangUsahaBrhntiTextField.getText());
+        pengalamanKerja.setStatusTerakhir((String) statusUsahaComboBox.getSelectedItem());
+        if(luarNegeriPositifRadioButton.isSelected()){
+            pengalamanKerja.setBekerjaDiLuarNegeri(pernahDiLuarNegeriTextField.getText());
+        }
+    }//GEN-LAST:event_nextButtonActionPerformed
+
+    private void alasanBerhentiKerjaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alasanBerhentiKerjaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alasanBerhentiKerjaComboBoxActionPerformed
+
+    private void statusUsahaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusUsahaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusUsahaComboBoxActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> alasanBerhentiKerjaComboBox;
     private javax.swing.JTextField alasanBerhentiKerjaTextField;
     private javax.swing.ButtonGroup berhentiKerjaButtonGroup;
     private javax.swing.JRadioButton berhentiKerjaNegatifRadioButton;
     private javax.swing.JRadioButton berhentiKerjaPositifRadioButton;
     private javax.swing.JTextField bidangUsahaBrhntiTextField;
-    private javax.swing.JComboBox<String> bidangUsahaComboBox;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -227,9 +290,15 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
     private javax.swing.JLabel judulAPanel;
     private javax.swing.JRadioButton luarNegeriNegatifRadioButton;
     private javax.swing.JRadioButton luarNegeriPositifRadioButton;
+    private javax.swing.JButton nextButton;
     private javax.swing.JTextField pernahDiLuarNegeriTextField;
     private javax.swing.ButtonGroup punyaPekerjaanButtonGroup;
     private javax.swing.JRadioButton punyaPekerjaanNegatifRadioButton;
     private javax.swing.JRadioButton punyaPekerjaanPositifRadioButton;
+    private javax.swing.JComboBox<String> statusUsahaComboBox;
     // End of variables declaration//GEN-END:variables
+
+    private Object getSelected(ButtonGroup punyaPekerjaanButtonGroup) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

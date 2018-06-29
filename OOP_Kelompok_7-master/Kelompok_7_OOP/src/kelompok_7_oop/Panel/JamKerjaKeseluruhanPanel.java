@@ -5,12 +5,21 @@
  */
 package kelompok_7_oop.Panel;
 
+import javax.swing.JScrollPane;
+import kelompok_7_oop.Kelas.AnggotaRuta;
+import kelompok_7_oop.Kelas.JamKerja;
+import kelompok_7_oop.Kelas.Ruta;
+
 /**
  *
  * @author Nashir
  */
 public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
 
+    private JScrollPane mainScrollPane;
+    private Ruta ruta = new Ruta();
+    private JamKerja jamKerja = new JamKerja();
+    
     /**
      * Creates new form JamKerjaKeseluruhanPanel
      */
@@ -30,19 +39,12 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
         tambahJamKerjaButtonGroup = new javax.swing.ButtonGroup();
         siapTambahJamButtonGroup = new javax.swing.ButtonGroup();
         alasanButtonGroup = new javax.swing.ButtonGroup();
-        sabtuJamKerjaTextField = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        rabuJamKerjaTextField = new javax.swing.JTextField();
-        selasaJamKerjaTextField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        seninJamKerjaTextField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jumatJamKerjaTextField = new javax.swing.JTextField();
-        kamisJamKerjaTextField = new javax.swing.JTextField();
-        mingguJamKerjaTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         judulAPanel = new javax.swing.JLabel();
@@ -57,60 +59,26 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         siapTambahJamRadioButton1 = new javax.swing.JRadioButton();
         tidakSiapTambahJamRadioButton1 = new javax.swing.JRadioButton();
-
-        sabtuJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sabtuJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
+        nextButton = new javax.swing.JButton();
+        seninJamKerjaSpinner = new javax.swing.JSpinner();
+        selasaJamKerjaSpinner = new javax.swing.JSpinner();
+        rabuJamKerjaSpinner = new javax.swing.JSpinner();
+        kamisJamKerjaSpinner = new javax.swing.JSpinner();
+        jumatJamKerjaSpinner = new javax.swing.JSpinner();
+        sabtuJamKerjaSpinner = new javax.swing.JSpinner();
+        mingguJamKerjaSpinner = new javax.swing.JSpinner();
 
         jLabel12.setText("Sabtu:");
 
         jLabel13.setText("Rabu:");
 
-        rabuJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rabuJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
-        selasaJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selasaJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
         jLabel8.setText("Selasa:");
 
         jLabel7.setText("Senin:");
 
-        seninJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seninJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
         jLabel10.setText("Kamis:");
 
         jLabel11.setText("Jum'at:");
-
-        jumatJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jumatJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
-        kamisJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kamisJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
-        mingguJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mingguJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
 
         jLabel9.setText("Minggu:");
 
@@ -167,6 +135,13 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
             }
         });
 
+        nextButton.setText("NEXT");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -175,62 +150,64 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(judulAPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(seninJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(selasaJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(rabuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(41, 41, 41)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(kamisJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(39, 39, 39)
-                                                .addComponent(jLabel9))
-                                            .addComponent(jumatJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(sabtuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(mingguJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
+                                .addComponent(siapTambahJamRadioButton1)
+                                .addGap(49, 49, 49)
+                                .addComponent(tidakSiapTambahJamRadioButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(tambahJamPositiveRadioButton)
+                                .addGap(49, 49, 49)
+                                .addComponent(tambahJamNegatifRadioButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(siapTambahJamRadioButton)
+                                .addGap(49, 49, 49)
+                                .addComponent(tidakSiapTambahJamRadioButton))
+                            .addComponent(jamKerjaBiasaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(252, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(siapTambahJamRadioButton1)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(tidakSiapTambahJamRadioButton1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(tambahJamPositiveRadioButton)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(tambahJamNegatifRadioButton1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(siapTambahJamRadioButton)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(tidakSiapTambahJamRadioButton))
-                                    .addComponent(jamKerjaBiasaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(seninJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(selasaJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(rabuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(40, 40, 40)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(kamisJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jumatJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(sabtuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jLabel6))
+                                        .addGap(43, 43, 43)
+                                        .addComponent(jLabel9)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(judulAPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE))
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(46, 46, 46))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,21 +221,21 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
                     .addComponent(jLabel7)
                     .addComponent(jLabel10)
                     .addComponent(jLabel9)
-                    .addComponent(seninJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kamisJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mingguJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(seninJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kamisJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel11)
-                    .addComponent(selasaJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jumatJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selasaJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jumatJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jLabel12)
-                    .addComponent(rabuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sabtuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rabuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sabtuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -281,37 +258,11 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(siapTambahJamRadioButton1)
                     .addComponent(tidakSiapTambahJamRadioButton1))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nextButton)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void sabtuJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sabtuJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sabtuJamKerjaTextFieldActionPerformed
-
-    private void rabuJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rabuJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rabuJamKerjaTextFieldActionPerformed
-
-    private void selasaJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selasaJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selasaJamKerjaTextFieldActionPerformed
-
-    private void seninJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seninJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seninJamKerjaTextFieldActionPerformed
-
-    private void jumatJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jumatJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jumatJamKerjaTextFieldActionPerformed
-
-    private void kamisJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kamisJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_kamisJamKerjaTextFieldActionPerformed
-
-    private void mingguJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mingguJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mingguJamKerjaTextFieldActionPerformed
 
     private void tambahJamNegatifRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahJamNegatifRadioButton1ActionPerformed
         // TODO add your handling code here:
@@ -321,13 +272,28 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_tidakSiapTambahJamRadioButtonActionPerformed
 
-    private void jamKerjaBiasaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jamKerjaBiasaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jamKerjaBiasaTextFieldActionPerformed
-
     private void tidakSiapTambahJamRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakSiapTambahJamRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tidakSiapTambahJamRadioButton1ActionPerformed
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        // TODO add your handling code here:
+        
+        
+        jamKerja.getJamKerjaPerHari()[0] = (int) seninJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[1] = (int) selasaJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[2] = (int) rabuJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[3] = (int) kamisJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[4] = (int) jumatJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[5] = (int) sabtuJamKerjaSpinner.getValue();
+        jamKerja.getJamKerjaPerHari()[6] = (int) mingguJamKerjaSpinner.getValue();
+
+        
+    }//GEN-LAST:event_nextButtonActionPerformed
+
+    private void jamKerjaBiasaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jamKerjaBiasaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jamKerjaBiasaTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -346,13 +312,14 @@ public class JamKerjaKeseluruhanPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jamKerjaBiasaTextField;
     private javax.swing.JLabel judulAPanel;
-    private javax.swing.JTextField jumatJamKerjaTextField;
-    private javax.swing.JTextField kamisJamKerjaTextField;
-    private javax.swing.JTextField mingguJamKerjaTextField;
-    private javax.swing.JTextField rabuJamKerjaTextField;
-    private javax.swing.JTextField sabtuJamKerjaTextField;
-    private javax.swing.JTextField selasaJamKerjaTextField;
-    private javax.swing.JTextField seninJamKerjaTextField;
+    private javax.swing.JSpinner jumatJamKerjaSpinner;
+    private javax.swing.JSpinner kamisJamKerjaSpinner;
+    private javax.swing.JSpinner mingguJamKerjaSpinner;
+    private javax.swing.JButton nextButton;
+    private javax.swing.JSpinner rabuJamKerjaSpinner;
+    private javax.swing.JSpinner sabtuJamKerjaSpinner;
+    private javax.swing.JSpinner selasaJamKerjaSpinner;
+    private javax.swing.JSpinner seninJamKerjaSpinner;
     private javax.swing.ButtonGroup siapTambahJamButtonGroup;
     private javax.swing.JRadioButton siapTambahJamRadioButton;
     private javax.swing.JRadioButton siapTambahJamRadioButton1;

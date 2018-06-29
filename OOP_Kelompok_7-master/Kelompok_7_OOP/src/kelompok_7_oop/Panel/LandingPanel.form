@@ -56,10 +56,7 @@
               </Group>
               <EmptySpace min="40" pref="66" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel3" max="32767" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -123,7 +120,11 @@
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+<<<<<<< HEAD
                   <EmptySpace pref="460" max="32767" attributes="0"/>
+=======
+                  <EmptySpace pref="556" max="32767" attributes="0"/>
+>>>>>>> 8c1b18a338cdab206797e0a24b44bd1cc17bf35b
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
@@ -141,7 +142,7 @@
                           <Component id="jLabel4" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -164,11 +165,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/ic_launcher.png"/>
             </Property>
           </Properties>
+=======
+>>>>>>> 8c1b18a338cdab206797e0a24b44bd1cc17bf35b
         </Component>
       </SubComponents>
     </Container>
@@ -227,11 +231,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/Hand With Pen_96px.png"/>
             </Property>
           </Properties>
+=======
+>>>>>>> 8c1b18a338cdab206797e0a24b44bd1cc17bf35b
         </Component>
       </SubComponents>
     </Container>
@@ -290,11 +297,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/Male User_96px.png"/>
             </Property>
           </Properties>
+=======
+>>>>>>> 8c1b18a338cdab206797e0a24b44bd1cc17bf35b
         </Component>
       </SubComponents>
     </Container>
@@ -327,11 +337,14 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel5">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/User_48px.png"/>
             </Property>
           </Properties>
+=======
+>>>>>>> 8c1b18a338cdab206797e0a24b44bd1cc17bf35b
         </Component>
       </SubComponents>
     </Container>
