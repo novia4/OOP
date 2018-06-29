@@ -11,5 +11,33 @@ package kelompok_7_oop.Kelas;
  */
 public class PekerjaanTambahan {
     private String pekerjaan;
-    private String atatusPekerjaan;
+    private String statusPekerjaan;
+
+    /**
+     * @return the pekerjaan
+     */
+    public String getPekerjaan() {
+        return pekerjaan;
+    }
+
+    /**
+     * @param pekerjaan the pekerjaan to set
+     */
+    public void setPekerjaan(String pekerjaan) {
+        this.pekerjaan = pekerjaan;
+    }
+
+    /**
+     * @return the statusPekerjaan
+     */
+    public String getStatusPekerjaan() {
+        return statusPekerjaan;
+    }
+
+    /**
+     * @param statusPekerjaan the statusPekerjaan to set
+     */
+    public void setStatusPekerjaan(String statusPekerjaan) {
+        this.statusPekerjaan = statusPekerjaan;
+    }
 }

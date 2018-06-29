@@ -5,15 +5,16 @@
  */
 package kelompok_7_oop.Panel;
 
+import kelompok_7_oop.Kelas.PekerjaanTambahan;
+
 /**
  *
  * @author maya
  */
 public class PekerjaanTambahanPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PekerjaanTambahanPanel
-     */
+    PekerjaanTambahan pekerjaanTambahan = new PekerjaanTambahan();
+    
     public PekerjaanTambahanPanel() {
         initComponents();
     }
@@ -36,6 +37,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
         negatifRadioButton = new javax.swing.JRadioButton();
         PekerjaanTambahanTextField = new javax.swing.JTextField();
         PekerjaanTambahanComboBox = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
 
         PekerjaanTambahanjLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         PekerjaanTambahanjLabel.setText("V.E. PEKERJAAN TAMBAHAN");
@@ -57,8 +59,26 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
         buttonGroup1.add(negatifRadioButton);
         negatifRadioButton.setText("TIDAK");
 
+        PekerjaanTambahanTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PekerjaanTambahanTextFieldActionPerformed(evt);
+            }
+        });
+
         PekerjaanTambahanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Berusaha dibantu buruh tidak tetap/pekerja keluarga/tidak dibayar", "Berusaha dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidakdibayar" }));
         PekerjaanTambahanComboBox.setSelectedIndex(-1);
+        PekerjaanTambahanComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PekerjaanTambahanComboBoxActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("NEXT");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -86,6 +106,10 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
                         .addGap(45, 45, 45)
                         .addComponent(PekerjaanTambahanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(52, 52, 52))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,13 +130,33 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(PekerjaanTambahanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void positifRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positifRadioButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_positifRadioButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if(positifRadioButton.isSelected()){
+            pekerjaanTambahan.setPekerjaan("Memiliki pekerjaan tambahan.");
+        } else if(negatifRadioButton.isSelected()){
+            pekerjaanTambahan.setPekerjaan("Tidak memiliki pekerjaan tambahan.");
+        }
+        pekerjaanTambahan.setPekerjaan(PekerjaanTambahanTextField.getText());
+        pekerjaanTambahan.setStatusPekerjaan((String) PekerjaanTambahanComboBox.getSelectedItem());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void PekerjaanTambahanTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PekerjaanTambahanTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PekerjaanTambahanTextFieldActionPerformed
+
+    private void PekerjaanTambahanComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PekerjaanTambahanComboBoxActionPerformed
+    }//GEN-LAST:event_PekerjaanTambahanComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -120,6 +164,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
     private javax.swing.JTextField PekerjaanTambahanTextField;
     private javax.swing.JLabel PekerjaanTambahanjLabel;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
