@@ -5,17 +5,24 @@
  */
 package kelompok_7_oop.Panel;
 
+import static javafx.scene.input.KeyCode.J;
+import javax.swing.JScrollPane;
+import kelompok_7_oop.Kelas.AnggotaRuta;
+
 /**
  *
  * @author Nashir
  */
 public class MencariKerjaPanel extends javax.swing.JPanel {
-
+    private JScrollPane mainScrollPane;
+    private AnggotaRuta art;
     /**
      * Creates new form MencariKerjaPanel
      */
-    public MencariKerjaPanel() {
+    public MencariKerjaPanel(JScrollPane mainScrollPane, AnggotaRuta ruta) {
         initComponents();
+        this.mainScrollPane=mainScrollPane;
+        this.art=ruta;
     }
 
     /**

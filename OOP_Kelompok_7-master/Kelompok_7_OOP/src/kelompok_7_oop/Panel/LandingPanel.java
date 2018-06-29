@@ -63,7 +63,7 @@ public class LandingPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel2)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addContainerGap(380, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,7 +81,7 @@ public class LandingPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jLabel4.setText("<html><ol><li>Nama 1</li><li>Nama 2</li><li>Nama 3</li><li>Nama 4</li><li>Nama 5</li></ol></html>");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\ic_launcher.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ic_launcher.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -95,7 +95,7 @@ public class LandingPanel extends javax.swing.JPanel {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 460, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(30, 30, 30))
         );
@@ -135,7 +135,7 @@ public class LandingPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jLabel7.setText("Pencacah");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\Hand With Pen_96px.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Hand With Pen_96px.png"))); // NOI18N
 
         javax.swing.GroupLayout pencacahButtonPanelLayout = new javax.swing.GroupLayout(pencacahButtonPanel);
         pencacahButtonPanel.setLayout(pencacahButtonPanelLayout);
@@ -183,7 +183,7 @@ public class LandingPanel extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jLabel10.setText("Pengawas");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\Male User_96px.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Male User_96px.png"))); // NOI18N
 
         javax.swing.GroupLayout pengawasButtonPanelLayout = new javax.swing.GroupLayout(pengawasButtonPanel);
         pengawasButtonPanel.setLayout(pengawasButtonPanelLayout);
@@ -210,7 +210,7 @@ public class LandingPanel extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(0, 18, 53));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\User_48px.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/User_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -257,7 +257,7 @@ public class LandingPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pengawasButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

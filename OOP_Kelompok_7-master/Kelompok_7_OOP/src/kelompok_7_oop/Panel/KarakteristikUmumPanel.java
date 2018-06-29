@@ -308,7 +308,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\Next page_48px.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Next page_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout buttonNextPanelLayout = new javax.swing.GroupLayout(buttonNextPanel);
         buttonNextPanel.setLayout(buttonNextPanelLayout);
@@ -420,7 +420,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
                                     .addComponent(provinsiTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 0, 0)
                         .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -498,7 +498,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
                             .addComponent(parahGangguanLainnyaRadioButton))))
                 .addGap(19, 19, 19)
                 .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(285, 285, 285)
@@ -602,7 +602,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         kU.setKabKota(kabKotaTextField.getText());
         art.setKarakteristikUmum(kU);
 
-        mainScrollPane.setViewportView(new KegiatanSemingguYangLalu_Panel());
+        mainScrollPane.setViewportView(new KegiatanSemingguYangLalu_Panel(mainScrollPane, art));
     }//GEN-LAST:event_buttonNextPanelMouseClicked
 
 

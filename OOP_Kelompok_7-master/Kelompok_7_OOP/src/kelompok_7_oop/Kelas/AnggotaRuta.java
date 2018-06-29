@@ -125,11 +125,12 @@ public class AnggotaRuta {
         return time;
     }
     public KarakteristikUmum getKarakteristikUmum(){
-        return karateristikUmum;
+        return this.karateristikUmum;
     }
     public void setKarakteristikUmum(KarakteristikUmum ku){
         this.karateristikUmum=ku;
     }
+    
     private String nama;
     private String hubunganDgKRT;
     private String gender;
@@ -138,4 +139,19 @@ public class AnggotaRuta {
     private String statKawin;
     private String statSekolah;
     private KarakteristikUmum karateristikUmum = new KarakteristikUmum();
+    private KegiatanMingguLalu mingguLalu = new KegiatanMingguLalu();
+
+    /**
+     * @return the mingguLalu
+     */
+    public KegiatanMingguLalu getKegiatanMingguLalu() {
+        return mingguLalu;
+    }
+
+    /**
+     * @param mingguLalu the mingguLalu to set
+     */
+    public void setKegiatanMingguLalu(KegiatanMingguLalu mingguLalu) {
+        this.mingguLalu = mingguLalu;
+    }
 }

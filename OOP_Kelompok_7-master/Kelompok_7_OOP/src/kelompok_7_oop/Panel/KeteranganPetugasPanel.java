@@ -127,7 +127,7 @@ public class KeteranganPetugasPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nashir\\Desktop\\Next page_48px.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Next page_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout nextButtonPanelLayout = new javax.swing.GroupLayout(nextButtonPanel);
         nextButtonPanel.setLayout(nextButtonPanelLayout);
