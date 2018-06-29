@@ -14,8 +14,8 @@ import java.util.Date;
 public class Petugas {
     protected String nama;
     protected String nomorHp;
-    protected Date tanggal;
-
+    private String tanggal;
+    private String kode;
     /**
      * @return the nama
      */
@@ -50,11 +50,30 @@ public class Petugas {
     /**
      * @return the tanggal
      */
-    public Date getTanggal() {
+    public String getTanggal() {
         return tanggal;
     }
 
     /**
      * @param tanggal the tanggal to set
      */
+    public void setTanggal(String tanggal) {
+        this.tanggal=tanggal;
+    }
+
+    /**
+     * @return the kode
+     */
+    public String getKode() {
+        return kode;
+    }
+
+    /**
+     * @param kode the kode to set
+     */
+    public void setKode(String kode) {
+        this.kode = kode;
+    }
+    
+
 }

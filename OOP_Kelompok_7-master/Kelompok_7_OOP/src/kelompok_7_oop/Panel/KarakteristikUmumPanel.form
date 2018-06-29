@@ -6,6 +6,16 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="penglihatanButtonGroup">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="pendengaranButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="mobilitasButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="gerakanJariButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="caraKomunikasiButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="linnyaButtonGroup">
+    </Component>
   </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -23,28 +33,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="judulAPanel" alignment="1" pref="447" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="bidangStudiTextField" min="-2" pref="250" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="ijazahComboBox" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -56,26 +54,12 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="tidakGangguanMobRadioButton" min="-2" max="-2" attributes="0"/>
@@ -84,11 +68,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="parahGangguanMobRadioButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                                           <Component id="tidakGangguanPendengaranRadioButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -98,16 +82,11 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="kabKotaTextField" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="tidakGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="sedangGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="parahGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="tidakGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="sedangGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="parahGangguanPenglihatanRadioButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -142,21 +121,38 @@
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="judulAPanel" alignment="1" pref="808" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="bidangStudiTextField" min="-2" pref="250" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="151" pref="151" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="kabKotaTextField" max="32767" attributes="0"/>
+                                  <Component id="provinsiTextField" pref="179" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="buttonNextPanel" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="kewarganegaraanTextField1" min="-2" pref="248" max="-2" attributes="0"/>
-                  <EmptySpace pref="183" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="provinsiTextField" min="-2" pref="179" max="-2" attributes="0"/>
-                  <EmptySpace pref="260" max="32767" attributes="0"/>
+                  <EmptySpace pref="544" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -167,84 +163,90 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="judulAPanel" min="-2" pref="49" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="ijazahComboBox" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="bidangStudiTextField" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pelatihanKerjaPositifRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="negatifPelatihanKerjaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="kabKotaTextField" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanPendengaranRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanPendengaranRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanPennglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ijazahComboBox" min="-2" max="-2" attributes="0"/>
+                  <Component id="provinsiTextField" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kabKotaTextField" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanJariRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanJariRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanJarRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="bidangStudiTextField" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="pelatihanKerjaPositifRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="negatifPelatihanKerjaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanPenglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanPendengaranRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanPendengaranRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanPennglihatanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanMobRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanJariRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanJariRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanJarRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanKomRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tidakGangguanLainnyaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sedangGangguanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parahGangguanLainnyaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tidakGangguanLainnyaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sedangGangguanRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="parahGangguanLainnyaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="86" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="buttonNextPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="285" max="-2" attributes="0"/>
                   <Component id="kewarganegaraanTextField1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="337" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="348" max="-2" attributes="0"/>
-                  <Component id="provinsiTextField" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="274" max="32767" attributes="0"/>
+                  <EmptySpace pref="139" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -403,7 +405,7 @@
     <Component class="javax.swing.JRadioButton" name="parahGangguanPennglihatanRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="pendengaranButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Parah"/>
       </Properties>
@@ -414,7 +416,7 @@
     <Component class="javax.swing.JRadioButton" name="sedangGangguanPendengaranRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="pendengaranButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sedang"/>
       </Properties>
@@ -425,7 +427,7 @@
     <Component class="javax.swing.JRadioButton" name="tidakGangguanPendengaranRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="pendengaranButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tidak"/>
       </Properties>
@@ -438,7 +440,7 @@
     <Component class="javax.swing.JRadioButton" name="tidakGangguanMobRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="mobilitasButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tidak"/>
       </Properties>
@@ -446,7 +448,7 @@
     <Component class="javax.swing.JRadioButton" name="sedangGangguanMobRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="mobilitasButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sedang"/>
       </Properties>
@@ -457,7 +459,7 @@
     <Component class="javax.swing.JRadioButton" name="parahGangguanMobRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="mobilitasButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Parah"/>
       </Properties>
@@ -473,7 +475,7 @@
     <Component class="javax.swing.JRadioButton" name="tidakGangguanJariRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="gerakanJariButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tidak"/>
       </Properties>
@@ -481,7 +483,7 @@
     <Component class="javax.swing.JRadioButton" name="sedangGangguanJariRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="gerakanJariButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sedang"/>
       </Properties>
@@ -492,7 +494,7 @@
     <Component class="javax.swing.JRadioButton" name="parahGangguanJarRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="gerakanJariButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Parah"/>
       </Properties>
@@ -508,7 +510,7 @@
     <Component class="javax.swing.JRadioButton" name="tidakGangguanKomRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="caraKomunikasiButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tidak"/>
       </Properties>
@@ -516,7 +518,7 @@
     <Component class="javax.swing.JRadioButton" name="sedangGangguanKomRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="caraKomunikasiButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sedang"/>
       </Properties>
@@ -527,7 +529,7 @@
     <Component class="javax.swing.JRadioButton" name="parahGangguanKomRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="caraKomunikasiButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Parah"/>
       </Properties>
@@ -543,7 +545,7 @@
     <Component class="javax.swing.JRadioButton" name="tidakGangguanLainnyaRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="linnyaButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tidak"/>
       </Properties>
@@ -554,7 +556,7 @@
     <Component class="javax.swing.JRadioButton" name="sedangGangguanRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="linnyaButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sedang"/>
       </Properties>
@@ -565,7 +567,7 @@
     <Component class="javax.swing.JRadioButton" name="parahGangguanLainnyaRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="penglihatanButtonGroup"/>
+          <ComponentRef name="linnyaButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Parah"/>
       </Properties>
@@ -573,5 +575,40 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="parahGangguanLainnyaRadioButtonActionPerformed"/>
       </Events>
     </Component>
+    <Container class="javax.swing.JPanel" name="buttonNextPanel">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonNextPanelMouseClicked"/>
+      </Events>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Nashir\Desktop\Next page_48px.png"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

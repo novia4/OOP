@@ -5,29 +5,33 @@
  */
 package kelompok_7_oop.Kelas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nashir
  */
 public class Ruta {
-    private TempatPencacahan alamat;
+    private TempatPencacahan alamat=new TempatPencacahan();
     private String namaKepalaRT;
     private String noUrutPemberiInfo;
     private String hasilKunjungan;
-
+    private Ringkasan ringkasan;
+    private ArrayList<AnggotaRuta> art = new ArrayList<>();
     /**
      * @return the alamat
      */
     public TempatPencacahan getAlamat() {
         return alamat;
     }
-
-    /**
-     * @param alamat the alamat to set
-     */
-    public void setAlamat(TempatPencacahan alamat) {
-        this.alamat = alamat;
+    public void addAnggotaRuta(AnggotaRuta aart){
+        art.add(aart);
     }
+    
+    public ArrayList<AnggotaRuta> getAllArt(){
+        return art;
+    }
+    
 
     /**
      * @return the namaKepalaRT
@@ -70,5 +74,19 @@ public class Ruta {
     public void setHasilKunjungan(String hasilKunjungan) {
         this.hasilKunjungan = hasilKunjungan;
     }
-    
+
+    /**
+     * @return the ringkasan
+     */
+    public Ringkasan getRingkasan() {
+        return ringkasan;
+    }
+
+    /**
+     * @param ringkasan the ringkasan to set
+     */
+    public void setRingkasan(Ringkasan ringkasan) {
+        this.ringkasan = ringkasan;
+    }
+
 }

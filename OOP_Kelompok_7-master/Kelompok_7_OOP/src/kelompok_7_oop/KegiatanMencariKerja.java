@@ -23,7 +23,7 @@ public class KegiatanMencariKerja {
     private String menerimaTawaran;
     private String siapKerja;
     private String inginPekerjaan;
-    private Array upah;
+//    private Array upah;
     
     public String getMencariKerja(){
         return mencariKerja;    
@@ -77,9 +77,9 @@ public class KegiatanMencariKerja {
         return mulaiPekerjaan;    
     }
     
-    public void setMulaiUsaha(String mulaiUsaha) {
-        this.mulaiUsaha = mulaiUsaha;
-    }
+//    public void setMulaiUsaha(String mulaiUsaha) {
+//        this.mulaiUsaha = mulaiUsaha;
+//    }
     
     public String getMenerimaTawaran(){
         return menerimaTawaran;    
@@ -105,12 +105,12 @@ public class KegiatanMencariKerja {
         this.inginPekerjaan = inginPekerjaan;
     }
     
-       public Array getUpah(){
-        return upah;    
-    }
-    
-    public void setUpah(Array upah) {
-        this.upah = upah;
-    }
+//       public Array getUpah(){
+//        return upah;    
+//    }
+//    
+//    public void setUpah(Array upah) {
+//        this.upah = upah;
+//    }
     
 }

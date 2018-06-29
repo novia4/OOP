@@ -9,15 +9,18 @@ package kelompok_7_oop.Kelas;
  *
  * @author USER-PC
  */
-public class KarakteristikUmum {
+public class KarakteristikUmum extends Lokasi{
     
     private String ijazahTerakhir;
     private String jurusan;
     private String pernahPelatihan;
     private String kewarganegaraan;
     Lokasi tptTigl5thnLalu;
-//    Gangguan gangguanFisik;
+    private Gangguan gangguan;
     
+    public Gangguan getGangguan(){
+        return gangguan;
+    }
     
     /**
      * @return the ijazahTerakhir
@@ -73,6 +76,9 @@ public class KarakteristikUmum {
      */
     public void setKewarganegaraan(String kewarganegaraan) {
         this.kewarganegaraan = kewarganegaraan;
+    }
+    public void setGangguan(Gangguan gg){
+        this.gangguan = gg;
     }
 
 }

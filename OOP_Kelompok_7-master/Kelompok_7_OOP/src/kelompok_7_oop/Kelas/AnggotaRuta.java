@@ -5,7 +5,13 @@
  */
 package kelompok_7_oop.Kelas;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -58,29 +64,29 @@ public class AnggotaRuta {
     /**
      * @return the bulanLahir
      */
-    public Date getBulanLahir() {
+    public int getBulanLahir() {
         return bulanLahir;
     }
 
     /**
      * @param bulanLahir the bulanLahir to set
      */
-    public void setBulanLahir(Date bulanLahir) {
+    public void setBulanLahir(int bulanLahir) {
         this.bulanLahir = bulanLahir;
     }
 
     /**
      * @return the umur
      */
-    public int getUmur() {
-        return umur;
+    public int getTahunLahir() {
+        return tahunLahir;
     }
 
     /**
      * @param umur the umur to set
      */
-    public void setUmur(int umur) {
-        this.umur = umur;
+    public void setTahunLahir(int tahunLahir) {
+        this.tahunLahir = tahunLahir;
     }
 
     /**
@@ -110,13 +116,26 @@ public class AnggotaRuta {
     public void setStatSekolah(String statSekolah) {
         this.statSekolah = statSekolah;
     }
-    
+    public int getUmur(int tahunLahir){
+        Date date = new Date();
+        int time =date.getYear() -tahunLahir+1900;
+        if(date.getMonth()>this.bulanLahir){
+        time++;
+    }
+        return time;
+    }
+    public KarakteristikUmum getKarakteristikUmum(){
+        return karateristikUmum;
+    }
+    public void setKarakteristikUmum(KarakteristikUmum ku){
+        this.karateristikUmum=ku;
+    }
     private String nama;
     private String hubunganDgKRT;
     private String gender;
-    private Date bulanLahir;
-    private int umur;
+    private int bulanLahir;
+    private int tahunLahir;
     private String statKawin;
     private String statSekolah;
-    
+    private KarakteristikUmum karateristikUmum = new KarakteristikUmum();
 }

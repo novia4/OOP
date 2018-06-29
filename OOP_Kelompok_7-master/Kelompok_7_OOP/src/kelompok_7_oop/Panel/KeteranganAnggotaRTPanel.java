@@ -5,17 +5,23 @@
  */
 package kelompok_7_oop.Panel;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author USER-PC
  */
-public class keteranganAnggotaRT extends javax.swing.JPanel {
+public class KeteranganAnggotaRTPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form keteranganAnggotaRT
      */
-    public keteranganAnggotaRT() {
+    public KeteranganAnggotaRTPanel() {
         initComponents();
+    }
+    
+    public JLabel getCountDisplay(){
+        return jLabel1;
     }
 
     /**
@@ -38,14 +44,12 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
         jKLakiLakiRadioButton = new javax.swing.JRadioButton();
         jKPerempuanRadioButton = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         partisipasiSekolahComboBox = new javax.swing.JComboBox<>();
         namaTextField = new javax.swing.JTextField();
         bulanLahirTextField = new javax.swing.JTextField();
         tahunLahirTextField = new javax.swing.JTextField();
-        umurTextField = new javax.swing.JTextField();
         statusKawinComboBox = new javax.swing.JComboBox<>();
 
         judulAPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -79,25 +83,22 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
 
         jLabel5.setText("Bulan dan Tahun Lahir : ");
 
-        jLabel6.setText("Umur : ");
-
         jLabel7.setText("Status Perkawinan : ");
 
         jLabel8.setText("Partisipasi Sekolah : ");
 
         partisipasiSekolahComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Tidak / Belum Pernah Sekolah", "2. Masih Bersekolah", "3. Tidak Bersekolah Lagi", " " }));
+        partisipasiSekolahComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                partisipasiSekolahComboBoxActionPerformed(evt);
+            }
+        });
 
         namaTextField.setToolTipText("");
 
         bulanLahirTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bulanLahirTextFieldActionPerformed(evt);
-            }
-        });
-
-        umurTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                umurTextFieldActionPerformed(evt);
             }
         });
 
@@ -108,6 +109,10 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -117,41 +122,37 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(namaTextField)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(namaTextField)
+                                    .addComponent(jKLakiLakiRadioButton)
+                                    .addComponent(hubDgKepRTComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jKPerempuanRadioButton)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jKLakiLakiRadioButton)
-                                            .addComponent(hubDgKepRTComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jKPerempuanRadioButton)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(umurTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                                                    .addComponent(bulanLahirTextField, javax.swing.GroupLayout.Alignment.LEADING))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(tahunLahirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(statusKawinComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(partisipasiSekolahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 49, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel1)
-                        .addGap(299, 299, 299)))
+                                        .addComponent(bulanLahirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tahunLahirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(statusKawinComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(partisipasiSekolahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,17 +184,13 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
                     .addComponent(tahunLahirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(umurTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(statusKawinComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(partisipasiSekolahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -205,9 +202,9 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_bulanLahirTextFieldActionPerformed
 
-    private void umurTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umurTextFieldActionPerformed
+    private void partisipasiSekolahComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_partisipasiSekolahComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_umurTextFieldActionPerformed
+    }//GEN-LAST:event_partisipasiSekolahComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -220,7 +217,6 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.ButtonGroup jenisKelaminbuttonGroup;
@@ -230,6 +226,80 @@ public class keteranganAnggotaRT extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> partisipasiSekolahComboBox;
     private javax.swing.JComboBox<String> statusKawinComboBox;
     private javax.swing.JTextField tahunLahirTextField;
-    private javax.swing.JTextField umurTextField;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the bulanLahirTextField
+     */
+    public javax.swing.JTextField getBulanLahirTextField() {
+        return bulanLahirTextField;
+    }
+
+    /**
+     * @return the hubDgKepRTComboBox
+     */
+    public javax.swing.JComboBox<String> getHubDgKepRTComboBox() {
+        return hubDgKepRTComboBox;
+    }
+
+    /**
+     * @return the jKLakiLakiRadioButton
+     */
+    public javax.swing.JRadioButton getjKLakiLakiRadioButton() {
+        return jKLakiLakiRadioButton;
+    }
+
+    /**
+     * @return the jKPerempuanRadioButton
+     */
+    public javax.swing.JRadioButton getjKPerempuanRadioButton() {
+        return jKPerempuanRadioButton;
+    }
+
+    /**
+     * @return the jenisKelaminbuttonGroup
+     */
+    public javax.swing.ButtonGroup getJenisKelaminbuttonGroup() {
+        return jenisKelaminbuttonGroup;
+    }
+
+    /**
+     * @param jenisKelaminbuttonGroup the jenisKelaminbuttonGroup to set
+     */
+    public void setJenisKelaminbuttonGroup(javax.swing.ButtonGroup jenisKelaminbuttonGroup) {
+        this.jenisKelaminbuttonGroup = jenisKelaminbuttonGroup;
+    }
+
+    /**
+     * @return the namaTextField
+     */
+    public javax.swing.JTextField getNamaTextField() {
+        return namaTextField;
+    }
+
+    /**
+     * @return the partisipasiSekolahComboBox
+     */
+    public javax.swing.JComboBox<String> getPartisipasiSekolahComboBox() {
+        return partisipasiSekolahComboBox;
+    }
+
+    /**
+     * @return the statusKawinComboBox
+     */
+    public javax.swing.JComboBox<String> getStatusKawinComboBox() {
+        return statusKawinComboBox;
+    }
+
+    /**
+     * @return the tahunLahirTextField
+     */
+    public javax.swing.JTextField getTahunLahirTextField() {
+        return tahunLahirTextField;
+    }
+
+    /**
+     * @return the umurTextField
+     */
+   
 }

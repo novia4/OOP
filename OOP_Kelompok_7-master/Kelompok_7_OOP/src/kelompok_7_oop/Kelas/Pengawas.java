@@ -5,24 +5,30 @@
  */
 package kelompok_7_oop.Kelas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nashir
  */
 public class Pengawas extends Petugas {
-    private String kodePengawas;
-
-    /**
-     * @return the kodePengawas
-     */
-    public String getKodePengawas() {
-        return kodePengawas;
+    private ArrayList<Pencacah> pencacahBawahan = new ArrayList<>();
+    
+    public ArrayList<Pencacah> getAnakBuah(){
+        ArrayList<Pencacah> temp = new ArrayList<>();
+        for(Pencacah a:pencacahBawahan){
+            if (this.getKode().equalsIgnoreCase(a.getKode()));
+            temp.add(a);
+        }
+        return temp;
     }
-
-    /**
-     * @param kodePengawas the kodePengawas to set
-     */
-    public void setKodePengawas(String kodePengawas) {
-        this.kodePengawas = kodePengawas;
+    
+    public void addPencacah(Pencacah pcc){
+        this.pencacahBawahan.add(pcc);
     }
+    /**
+     * @return the kodePencacah
+     */
+   
+
 }
