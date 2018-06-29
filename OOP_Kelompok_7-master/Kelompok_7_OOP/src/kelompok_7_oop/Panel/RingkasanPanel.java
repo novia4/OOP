@@ -76,7 +76,7 @@ public class RingkasanPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jumlahAngRT19Label))
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(0, 49, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
