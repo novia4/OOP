@@ -5,15 +5,19 @@
  */
 package kelompok_7_oop.Panel;
 
+import kelompok_7_oop.Kelas.FasilitasPekerjaan;
+import kelompok_7_oop.Kelas.JamKerja;
+import kelompok_7_oop.Kelas.Lokasi;
+import kelompok_7_oop.Kelas.Pekerjaan;
+
 /**
  *
  * @author Nashir
  */
 public class PekerjaanUtamaPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PekerjaanUtamaPanel
-     */
+    Pekerjaan pekerjaanUtama = new Pekerjaan();
+    
     public PekerjaanUtamaPanel() {
         initComponents();
     }
@@ -43,9 +47,7 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jenisKerjaUtmTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        lamaKerjaUtmTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        lamaKerjaUtmTextField1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -54,9 +56,6 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        seninJamKerjaTextField = new javax.swing.JTextField();
-        selasaJamKerjaTextField = new javax.swing.JTextField();
-        rabuJamKerjaTextField = new javax.swing.JTextField();
         kamisJamKerjaTextField = new javax.swing.JTextField();
         jumatJamKerjaTextField = new javax.swing.JTextField();
         sabtuJamKerjaTextField = new javax.swing.JTextField();
@@ -130,6 +129,106 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
         lamaJalanComboBox = new javax.swing.JComboBox<>();
         jLabel38 = new javax.swing.JLabel();
         jenisTransportComboBox = new javax.swing.JComboBox<>();
+        PekerjaanUtamaButton = new javax.swing.JButton();
+        LamaBekerjaSpinner = new javax.swing.JSpinner();
+        LamaCariKerjaSpinner = new javax.swing.JSpinner();
+        SeninJamKerjaSpinner = new javax.swing.JSpinner();
+        SelasaJamKerjaSpinner = new javax.swing.JSpinner();
+        jPanel1 = new javax.swing.JPanel();
+        judulDPanel1 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        lapanganKerjaUtmTextField1 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        jenisKerjaUtmTextField1 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        statusKedudukanKerjaComboBox1 = new javax.swing.JComboBox<>();
+        jLabel53 = new javax.swing.JLabel();
+        caraPembukuanComboBox1 = new javax.swing.JComboBox<>();
+        jLabel54 = new javax.swing.JLabel();
+        dipakaiSndriNegatifRadioButton2 = new javax.swing.JRadioButton();
+        dipakaiSndriPositifRadioButton1 = new javax.swing.JRadioButton();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        upahUangTextField1 = new javax.swing.JTextField();
+        jLabel57 = new javax.swing.JLabel();
+        upahBarangTextField1 = new javax.swing.JTextField();
+        jLabel58 = new javax.swing.JLabel();
+        sistemPmbayaranComboBox2 = new javax.swing.JComboBox<>();
+        jLabel59 = new javax.swing.JLabel();
+        tidakTahuJamKesRadioButton2 = new javax.swing.JRadioButton();
+        yaJamKesRadioButton2 = new javax.swing.JRadioButton();
+        tidakJamKesRadioButton2 = new javax.swing.JRadioButton();
+        jLabel60 = new javax.swing.JLabel();
+        tidakTahuJamKecKerjaRadioButton2 = new javax.swing.JRadioButton();
+        tidakJamKecKerjaRadioButton2 = new javax.swing.JRadioButton();
+        yaJamKecKerjaRadioButton2 = new javax.swing.JRadioButton();
+        jLabel61 = new javax.swing.JLabel();
+        tidakTahuJamTuaRadioButton1 = new javax.swing.JRadioButton();
+        tidakJamTuaRadioButton1 = new javax.swing.JRadioButton();
+        yaJamTuaRadioButton1 = new javax.swing.JRadioButton();
+        jLabel62 = new javax.swing.JLabel();
+        tidakTahuJamPensRadioButton1 = new javax.swing.JRadioButton();
+        tidakJamPensRadioButton1 = new javax.swing.JRadioButton();
+        yaJamPensRadioButton1 = new javax.swing.JRadioButton();
+        jLabel63 = new javax.swing.JLabel();
+        tidakTahuJamMatiRadioButton1 = new javax.swing.JRadioButton();
+        tidakJamMatiRadioButton1 = new javax.swing.JRadioButton();
+        yaJamMatiRadioButton1 = new javax.swing.JRadioButton();
+        jLabel64 = new javax.swing.JLabel();
+        tidakTahuCutiRadioButton1 = new javax.swing.JRadioButton();
+        tidakCutiRadioButton1 = new javax.swing.JRadioButton();
+        yaCutiRadioButton1 = new javax.swing.JRadioButton();
+        jLabel65 = new javax.swing.JLabel();
+        tidakTahuPesangonRadioButton1 = new javax.swing.JRadioButton();
+        tidakPesangonRadioButton1 = new javax.swing.JRadioButton();
+        yaPesangonRadioButton1 = new javax.swing.JRadioButton();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        sistemPmbayaranComboBox3 = new javax.swing.JComboBox<>();
+        jLabel68 = new javax.swing.JLabel();
+        tidakTahuJamKesRadioButton3 = new javax.swing.JRadioButton();
+        tidakJamKesRadioButton3 = new javax.swing.JRadioButton();
+        yaJamKesRadioButton3 = new javax.swing.JRadioButton();
+        jLabel69 = new javax.swing.JLabel();
+        jenisInstansiComboBox1 = new javax.swing.JComboBox<>();
+        lainyaInstansiTextField1 = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        tempatKerjaComboBox1 = new javax.swing.JComboBox<>();
+        jLabel71 = new javax.swing.JLabel();
+        provNegTextField1 = new javax.swing.JTextField();
+        kabKotaTextField1 = new javax.swing.JTextField();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jarakTempatKerjaComboBox1 = new javax.swing.JComboBox<>();
+        setiapHariRadioButton1 = new javax.swing.JRadioButton();
+        setiapMingguRadioButton1 = new javax.swing.JRadioButton();
+        setiapBulanRadioButton1 = new javax.swing.JRadioButton();
+        jLabel74 = new javax.swing.JLabel();
+        lamaJalanComboBox1 = new javax.swing.JComboBox<>();
+        jLabel75 = new javax.swing.JLabel();
+        jenisTransportComboBox1 = new javax.swing.JComboBox<>();
+        PekerjaanUtamaButton1 = new javax.swing.JButton();
+        LamaBekerjaSpinner1 = new javax.swing.JSpinner();
+        LamaCariKerjaSpinner1 = new javax.swing.JSpinner();
+        jSpinner3 = new javax.swing.JSpinner();
+        jSpinner4 = new javax.swing.JSpinner();
+        RabuJamKerjaSpinner = new javax.swing.JSpinner();
+        KamisJamKerjaSpinner = new javax.swing.JSpinner();
+        JumatJamKerjaSpinner = new javax.swing.JSpinner();
+        SabtuJamKerjaSpinner = new javax.swing.JSpinner();
+        MingguJamKerjaSpinner = new javax.swing.JSpinner();
+        SemingguJamKerjaSpinner = new javax.swing.JSpinner();
 
         jLabel1.setText("Selama seminggu lalu anda mencair kerja:");
 
@@ -155,19 +254,7 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Lama bekerja di pekerjaan utama:");
 
-        lamaKerjaUtmTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lamaKerjaUtmTextFieldActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("Lama mencari pekerjaan/mempersiapkan usaha di pkerjaan utama:");
-
-        lamaKerjaUtmTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lamaKerjaUtmTextField1ActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Jumlah jam kerja dalam pekerjaan utama:");
 
@@ -184,24 +271,6 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
         jLabel12.setText("Sabtu:");
 
         jLabel13.setText("Rabu:");
-
-        seninJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seninJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
-        selasaJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selasaJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
-
-        rabuJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rabuJamKerjaTextFieldActionPerformed(evt);
-            }
-        });
 
         kamisJamKerjaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -555,10 +624,727 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
             }
         });
 
+        PekerjaanUtamaButton.setText("NEXT");
+        PekerjaanUtamaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PekerjaanUtamaButtonActionPerformed(evt);
+            }
+        });
+
+        judulDPanel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        judulDPanel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        judulDPanel1.setText("V.D. PEKERJAAN UTAMA");
+
+        jLabel39.setText("Nama lapangan pekerjaan utama seminggu lalu:");
+
+        lapanganKerjaUtmTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lapanganKerjaUtmTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel40.setText("Jenis pekerjaan/jabatan dari pekerjaan utama seminggu lalu:");
+
+        jenisKerjaUtmTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jenisKerjaUtmTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel41.setText("Lama bekerja di pekerjaan utama:");
+
+        jLabel42.setText("Lama mencari pekerjaan/mempersiapkan usaha di pkerjaan utama:");
+
+        jLabel43.setText("Jumlah jam kerja dalam pekerjaan utama:");
+
+        jLabel44.setText("Senin:");
+
+        jLabel45.setText("Selasa:");
+
+        jLabel46.setText("Minggu:");
+
+        jLabel47.setText("Kamis:");
+
+        jLabel48.setText("Jum'at:");
+
+        jLabel49.setText("Sabtu:");
+
+        jLabel50.setText("Rabu:");
+
+        jLabel51.setText("Jam kerja biasanya dalam seminggu:");
+
+        jLabel52.setText("Status kedudukan pada pekerjaan utama selama seminggu lalu:");
+
+        statusKedudukanKerjaComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berusaha sendiri", "Dibantu buruh tidak tetap/pekerja keluarga/tidak dibayar", "Dibantu buruh tetap/dibayar", "Buruh/karyawan/pegawai", "Pekerja bebas di pertanian", "Pekerja bebas di nonpertanian", "Pekerja keluarga/tidak dibayar" }));
+        statusKedudukanKerjaComboBox1.setSelectedIndex(-1);
+
+        jLabel53.setText("Cara perusahaan melakukan pembukuan:");
+
+        caraPembukuanComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tidak ada pembukuan tertulis", "Ada, pembukuan sederhana", "Pembukuan lengkap (laba/rugi dan neraca)", "Tidak tahu" }));
+        caraPembukuanComboBox1.setSelectedIndex(-1);
+
+        jLabel54.setText("<html>Barang/jasa yang dihasilkan dari pekerjaan seminggu yang lalu<br>diutamakan untuk digunakan sendiri:</html>");
+
+        pakaiSndiriButtonGroup.add(dipakaiSndriNegatifRadioButton2);
+        dipakaiSndriNegatifRadioButton2.setText("Tidak");
+        dipakaiSndriNegatifRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dipakaiSndriNegatifRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        pakaiSndiriButtonGroup.add(dipakaiSndriPositifRadioButton1);
+        dipakaiSndriPositifRadioButton1.setText("Ya");
+
+        jLabel55.setText("Upah bersih yang diterima (uang & barang):");
+
+        jLabel56.setText("Uang:");
+
+        upahUangTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upahUangTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel57.setText("Barang:");
+
+        upahBarangTextField1.setToolTipText("Konversi menjadi uang");
+        upahBarangTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                upahBarangTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel58.setText("Sistem pembayaran/pengupahan pekerjaan utama:");
+
+        sistemPmbayaranComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bulanan", "Mingguan", "Harian", "Borongan", "Dibayar persatuan hasil" }));
+        sistemPmbayaranComboBox2.setSelectedIndex(-1);
+
+        jLabel59.setText("Fasilitas pekerjaan:");
+
+        jamKesButtonGroup.add(tidakTahuJamKesRadioButton2);
+        tidakTahuJamKesRadioButton2.setText("Tidak tahu");
+        tidakTahuJamKesRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamKesRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jamKesButtonGroup.add(yaJamKesRadioButton2);
+        yaJamKesRadioButton2.setText("Ya");
+        yaJamKesRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamKesRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jamKesButtonGroup.add(tidakJamKesRadioButton2);
+        tidakJamKesRadioButton2.setText("Tidak");
+        tidakJamKesRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamKesRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel60.setText("Jaminan kesehatan");
+
+        jamKecKerjaButtonGroup.add(tidakTahuJamKecKerjaRadioButton2);
+        tidakTahuJamKecKerjaRadioButton2.setText("Tidak tahu");
+        tidakTahuJamKecKerjaRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamKecKerjaRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jamKecKerjaButtonGroup.add(tidakJamKecKerjaRadioButton2);
+        tidakJamKecKerjaRadioButton2.setText("Tidak");
+        tidakJamKecKerjaRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamKecKerjaRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jamKecKerjaButtonGroup.add(yaJamKecKerjaRadioButton2);
+        yaJamKecKerjaRadioButton2.setText("Ya");
+        yaJamKecKerjaRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamKecKerjaRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel61.setText("Jaminan kecelakaan kerja");
+
+        jamTuaButtonGroup.add(tidakTahuJamTuaRadioButton1);
+        tidakTahuJamTuaRadioButton1.setText("Tidak tahu");
+        tidakTahuJamTuaRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamTuaRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamTuaButtonGroup.add(tidakJamTuaRadioButton1);
+        tidakJamTuaRadioButton1.setText("Tidak");
+        tidakJamTuaRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamTuaRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamTuaButtonGroup.add(yaJamTuaRadioButton1);
+        yaJamTuaRadioButton1.setText("Ya");
+        yaJamTuaRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamTuaRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel62.setText("Jaminan hari tua");
+
+        jamPensButtonGroup.add(tidakTahuJamPensRadioButton1);
+        tidakTahuJamPensRadioButton1.setText("Tidak tahu");
+        tidakTahuJamPensRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamPensRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamPensButtonGroup.add(tidakJamPensRadioButton1);
+        tidakJamPensRadioButton1.setText("Tidak");
+        tidakJamPensRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamPensRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamPensButtonGroup.add(yaJamPensRadioButton1);
+        yaJamPensRadioButton1.setText("Ya");
+        yaJamPensRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamPensRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel63.setText("Jaminan pensiun");
+
+        jamMatiButtonGroup.add(tidakTahuJamMatiRadioButton1);
+        tidakTahuJamMatiRadioButton1.setText("Tidak tahu");
+        tidakTahuJamMatiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamMatiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamMatiButtonGroup.add(tidakJamMatiRadioButton1);
+        tidakJamMatiRadioButton1.setText("Tidak");
+        tidakJamMatiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamMatiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jamMatiButtonGroup.add(yaJamMatiRadioButton1);
+        yaJamMatiRadioButton1.setText("Ya");
+        yaJamMatiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamMatiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel64.setText("Jaminan kematian");
+
+        cutiButtonGroup.add(tidakTahuCutiRadioButton1);
+        tidakTahuCutiRadioButton1.setText("Tidak tahu");
+        tidakTahuCutiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuCutiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        cutiButtonGroup.add(tidakCutiRadioButton1);
+        tidakCutiRadioButton1.setText("Tidak");
+        tidakCutiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakCutiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        cutiButtonGroup.add(yaCutiRadioButton1);
+        yaCutiRadioButton1.setText("Ya");
+        yaCutiRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaCutiRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel65.setText("Cuti tanpa potong upah");
+
+        pesangonButtonGroup.add(tidakTahuPesangonRadioButton1);
+        tidakTahuPesangonRadioButton1.setText("Tidak tahu");
+        tidakTahuPesangonRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuPesangonRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        pesangonButtonGroup.add(tidakPesangonRadioButton1);
+        tidakPesangonRadioButton1.setText("Tidak");
+        tidakPesangonRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakPesangonRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        pesangonButtonGroup.add(yaPesangonRadioButton1);
+        yaPesangonRadioButton1.setText("Ya");
+        yaPesangonRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaPesangonRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel66.setText("Pesangon");
+
+        jLabel67.setText("Jenis perjanjian atau kontrak kerja:");
+
+        sistemPmbayaranComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perjanjian Kerja Waktu Tidak Tertentu", "Perjanjian Kerja Waktu Tertentu", "Perjanjian Lisan", "Tidak ada perjanjian/kontrak kerja", "Tidak tahu" }));
+        sistemPmbayaranComboBox3.setSelectedIndex(-1);
+
+        jLabel68.setText("Terlibat dalam serikat pekerja:");
+
+        serikatKerjaButtonGroup.add(tidakTahuJamKesRadioButton3);
+        tidakTahuJamKesRadioButton3.setText("Tidak tahu");
+        tidakTahuJamKesRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakTahuJamKesRadioButton3ActionPerformed(evt);
+            }
+        });
+
+        serikatKerjaButtonGroup.add(tidakJamKesRadioButton3);
+        tidakJamKesRadioButton3.setText("Tidak");
+        tidakJamKesRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tidakJamKesRadioButton3ActionPerformed(evt);
+            }
+        });
+
+        serikatKerjaButtonGroup.add(yaJamKesRadioButton3);
+        yaJamKesRadioButton3.setText("Ya");
+        yaJamKesRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yaJamKesRadioButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel69.setText("Jenis instansi/lembaga/institusi dari tempat kerja/usaha:");
+
+        jenisInstansiComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pemerintah/negeri", "Lembaga/organisasi internasional", "Lembaga nonprofit/nirlaba", "Lembaga profit (perusahaan swasta, BUMN, BUMD)", "Koperasi", "Usaha perorangan/usaha rumah tangga", "Rumah tangga", "Lainnya", "Tidak tahu" }));
+        jenisInstansiComboBox1.setSelectedIndex(-1);
+
+        lainyaInstansiTextField1.setEditable(false);
+
+        jLabel70.setText("Lokasi utama tempat kerja:");
+
+        tempatKerjaComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rumah sendiri  ", "Rumah keluarga/teman", "Rumah pemberi kerja", "Lainnya" }));
+        tempatKerjaComboBox1.setSelectedIndex(-1);
+
+        jLabel71.setText("Letak tempat kerja:");
+
+        kabKotaTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kabKotaTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel72.setText("Pulang/pergi tempat kerja:");
+
+        jLabel73.setText("Jarak rumah ke tempat kerja:");
+
+        jarakTempatKerjaComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< 10 Km", "10 – 29 Km", "≥ 30 Km", "Tidak tahu" }));
+        jarakTempatKerjaComboBox1.setSelectedIndex(-1);
+        jarakTempatKerjaComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jarakTempatKerjaComboBox1ActionPerformed(evt);
+            }
+        });
+
+        setiapHariRadioButton1.setText("Setiap Hari");
+
+        setiapMingguRadioButton1.setText("Setiap Minggu");
+
+        setiapBulanRadioButton1.setText("Setiap Bulan");
+
+        jLabel74.setText("Lama perjalanan ke tempat kerja:");
+
+        lamaJalanComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "≤ 30 Menit", "31 – 60 Menit", "61 – 120 Menit", "> 120 Menit" }));
+        lamaJalanComboBox1.setSelectedIndex(-1);
+        lamaJalanComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lamaJalanComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel75.setText("Jenis transportasi ke tempat kerja:");
+
+        jenisTransportComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Transportasi umum", "Transportasi bersama", "Transportasi pribadi", "Jalan kaki" }));
+        jenisTransportComboBox1.setSelectedIndex(-1);
+        jenisTransportComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jenisTransportComboBox1ActionPerformed(evt);
+            }
+        });
+
+        PekerjaanUtamaButton1.setText("NEXT");
+        PekerjaanUtamaButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PekerjaanUtamaButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PekerjaanUtamaButton1)
+                .addGap(24, 24, 24))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(judulDPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel40)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lapanganKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel39)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel41)
+                            .addComponent(jLabel42)
+                            .addComponent(jLabel43)
+                            .addComponent(jLabel51)
+                            .addComponent(jLabel52)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel55)
+                            .addComponent(jLabel58)
+                            .addComponent(jLabel59)
+                            .addComponent(jLabel67)
+                            .addComponent(jLabel68)
+                            .addComponent(jLabel69)
+                            .addComponent(jLabel70)
+                            .addComponent(jLabel71)
+                            .addComponent(jLabel72)
+                            .addComponent(jLabel73)
+                            .addComponent(jLabel74)
+                            .addComponent(jLabel75)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jenisTransportComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lamaJalanComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jarakTempatKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(setiapHariRadioButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(setiapMingguRadioButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(setiapBulanRadioButton1))
+                                    .addComponent(tempatKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jenisInstansiComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(yaJamKesRadioButton3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tidakJamKesRadioButton3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tidakTahuJamKesRadioButton3))
+                                    .addComponent(sistemPmbayaranComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(upahBarangTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(upahUangTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jenisKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RabuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(KamisJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(38, 38, 38)
+                                                .addComponent(jLabel46)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(MingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(JumatJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(SabtuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(caraPembukuanComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(statusKedudukanKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(dipakaiSndriPositifRadioButton1)
+                                        .addGap(49, 49, 49)
+                                        .addComponent(dipakaiSndriNegatifRadioButton2))
+                                    .addComponent(jLabel60)
+                                    .addComponent(sistemPmbayaranComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel61)
+                                    .addComponent(jLabel62)
+                                    .addComponent(jLabel63)
+                                    .addComponent(jLabel64)
+                                    .addComponent(jLabel65)
+                                    .addComponent(jLabel66)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(196, 196, 196)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaJamKesRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakJamKesRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuJamKesRadioButton2))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaJamKecKerjaRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakJamKecKerjaRadioButton2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuJamKecKerjaRadioButton2))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaJamTuaRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakJamTuaRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuJamTuaRadioButton1))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaJamPensRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakJamPensRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuJamPensRadioButton1))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaJamMatiRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakJamMatiRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuJamMatiRadioButton1))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaCutiRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakCutiRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuCutiRadioButton1))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(yaPesangonRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakPesangonRadioButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tidakTahuPesangonRadioButton1))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(provNegTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(kabKotaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lainyaInstansiTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LamaBekerjaSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LamaCariKerjaSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(SemingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 46, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(judulDPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lapanganKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jenisKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel41)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LamaBekerjaSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jLabel42)
+                .addGap(13, 13, 13)
+                .addComponent(LamaCariKerjaSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(jLabel47)
+                    .addComponent(jLabel46)
+                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(KamisJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabel48)
+                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JumatJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel50)
+                    .addComponent(jLabel49)
+                    .addComponent(RabuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SabtuJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SemingguJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(statusKedudukanKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(caraPembukuanComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dipakaiSndriPositifRadioButton1)
+                    .addComponent(dipakaiSndriNegatifRadioButton2))
+                .addGap(12, 12, 12)
+                .addComponent(jLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel56)
+                    .addComponent(upahUangTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57)
+                    .addComponent(upahBarangTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sistemPmbayaranComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel60)
+                    .addComponent(yaJamKesRadioButton2)
+                    .addComponent(tidakJamKesRadioButton2)
+                    .addComponent(tidakTahuJamKesRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(yaJamKecKerjaRadioButton2)
+                    .addComponent(tidakJamKecKerjaRadioButton2)
+                    .addComponent(tidakTahuJamKecKerjaRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel62)
+                    .addComponent(yaJamTuaRadioButton1)
+                    .addComponent(tidakJamTuaRadioButton1)
+                    .addComponent(tidakTahuJamTuaRadioButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel63)
+                    .addComponent(yaJamPensRadioButton1)
+                    .addComponent(tidakJamPensRadioButton1)
+                    .addComponent(tidakTahuJamPensRadioButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel64)
+                    .addComponent(yaJamMatiRadioButton1)
+                    .addComponent(tidakJamMatiRadioButton1)
+                    .addComponent(tidakTahuJamMatiRadioButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel65)
+                    .addComponent(yaCutiRadioButton1)
+                    .addComponent(tidakCutiRadioButton1)
+                    .addComponent(tidakTahuCutiRadioButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel66)
+                    .addComponent(yaPesangonRadioButton1)
+                    .addComponent(tidakPesangonRadioButton1)
+                    .addComponent(tidakTahuPesangonRadioButton1))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel67)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sistemPmbayaranComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel68)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(yaJamKesRadioButton3)
+                    .addComponent(tidakJamKesRadioButton3)
+                    .addComponent(tidakTahuJamKesRadioButton3))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel69)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jenisInstansiComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lainyaInstansiTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel70)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tempatKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel71)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(provNegTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kabKotaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel72)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(setiapHariRadioButton1)
+                    .addComponent(setiapMingguRadioButton1)
+                    .addComponent(setiapBulanRadioButton1))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel73)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jarakTempatKerjaComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lamaJalanComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel75)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jenisTransportComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PekerjaanUtamaButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PekerjaanUtamaButton)
+                .addGap(24, 24, 24))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -624,8 +1410,6 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(upahUangTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jenisKerjaUtmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lamaKerjaUtmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lamaKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -633,10 +1417,9 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(seninJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(selasaJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(rabuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(41, 41, 41)
+                                            .addComponent(SeninJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(SelasaJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(40, 40, 40)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -715,8 +1498,15 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
                                         .addComponent(provNegTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(kabKotaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lainyaInstansiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 28, Short.MAX_VALUE))))
+                                    .addComponent(lainyaInstansiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LamaBekerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LamaCariKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 46, Short.MAX_VALUE))))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -733,33 +1523,32 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
                 .addComponent(jenisKerjaUtmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lamaKerjaUtmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LamaBekerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lamaKerjaUtmTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
+                .addComponent(LamaCariKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLabel10)
                     .addComponent(jLabel9)
-                    .addComponent(seninJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(kamisJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mingguJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mingguJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SeninJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel11)
-                    .addComponent(selasaJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jumatJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jumatJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelasaJamKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jLabel12)
-                    .addComponent(rabuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sabtuJamKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel14)
@@ -883,37 +1672,20 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
                 .addComponent(jLabel38)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jenisTransportComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PekerjaanUtamaButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void lapanganKerjaUtmTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapanganKerjaUtmTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lapanganKerjaUtmTextFieldActionPerformed
-
-    private void jenisKerjaUtmTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisKerjaUtmTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jenisKerjaUtmTextFieldActionPerformed
-
-    private void lamaKerjaUtmTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamaKerjaUtmTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lamaKerjaUtmTextFieldActionPerformed
-
-    private void lamaKerjaUtmTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamaKerjaUtmTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lamaKerjaUtmTextField1ActionPerformed
-
-    private void seninJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seninJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seninJamKerjaTextFieldActionPerformed
-
-    private void selasaJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selasaJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selasaJamKerjaTextFieldActionPerformed
-
-    private void rabuJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rabuJamKerjaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rabuJamKerjaTextFieldActionPerformed
 
     private void kamisJamKerjaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kamisJamKerjaTextFieldActionPerformed
         // TODO add your handling code here:
@@ -1059,12 +1831,260 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jenisTransportComboBoxActionPerformed
 
+    private void PekerjaanUtamaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PekerjaanUtamaButtonActionPerformed
+
+    }//GEN-LAST:event_PekerjaanUtamaButtonActionPerformed
+
+    private void jenisKerjaUtmTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisKerjaUtmTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jenisKerjaUtmTextFieldActionPerformed
+
+    private void lapanganKerjaUtmTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapanganKerjaUtmTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lapanganKerjaUtmTextField1ActionPerformed
+
+    private void jenisKerjaUtmTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisKerjaUtmTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jenisKerjaUtmTextField1ActionPerformed
+
+    private void dipakaiSndriNegatifRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dipakaiSndriNegatifRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dipakaiSndriNegatifRadioButton2ActionPerformed
+
+    private void upahUangTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upahUangTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_upahUangTextField1ActionPerformed
+
+    private void upahBarangTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upahBarangTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_upahBarangTextField1ActionPerformed
+
+    private void tidakTahuJamKesRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamKesRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamKesRadioButton2ActionPerformed
+
+    private void yaJamKesRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamKesRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamKesRadioButton2ActionPerformed
+
+    private void tidakJamKesRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamKesRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamKesRadioButton2ActionPerformed
+
+    private void tidakTahuJamKecKerjaRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamKecKerjaRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamKecKerjaRadioButton2ActionPerformed
+
+    private void tidakJamKecKerjaRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamKecKerjaRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamKecKerjaRadioButton2ActionPerformed
+
+    private void yaJamKecKerjaRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamKecKerjaRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamKecKerjaRadioButton2ActionPerformed
+
+    private void tidakTahuJamTuaRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamTuaRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamTuaRadioButton1ActionPerformed
+
+    private void tidakJamTuaRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamTuaRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamTuaRadioButton1ActionPerformed
+
+    private void yaJamTuaRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamTuaRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamTuaRadioButton1ActionPerformed
+
+    private void tidakTahuJamPensRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamPensRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamPensRadioButton1ActionPerformed
+
+    private void tidakJamPensRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamPensRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamPensRadioButton1ActionPerformed
+
+    private void yaJamPensRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamPensRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamPensRadioButton1ActionPerformed
+
+    private void tidakTahuJamMatiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamMatiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamMatiRadioButton1ActionPerformed
+
+    private void tidakJamMatiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamMatiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamMatiRadioButton1ActionPerformed
+
+    private void yaJamMatiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamMatiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamMatiRadioButton1ActionPerformed
+
+    private void tidakTahuCutiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuCutiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuCutiRadioButton1ActionPerformed
+
+    private void tidakCutiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakCutiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakCutiRadioButton1ActionPerformed
+
+    private void yaCutiRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaCutiRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaCutiRadioButton1ActionPerformed
+
+    private void tidakTahuPesangonRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuPesangonRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuPesangonRadioButton1ActionPerformed
+
+    private void tidakPesangonRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakPesangonRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakPesangonRadioButton1ActionPerformed
+
+    private void yaPesangonRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaPesangonRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaPesangonRadioButton1ActionPerformed
+
+    private void tidakTahuJamKesRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakTahuJamKesRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakTahuJamKesRadioButton3ActionPerformed
+
+    private void tidakJamKesRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tidakJamKesRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tidakJamKesRadioButton3ActionPerformed
+
+    private void yaJamKesRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yaJamKesRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yaJamKesRadioButton3ActionPerformed
+
+    private void kabKotaTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kabKotaTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kabKotaTextField1ActionPerformed
+
+    private void jarakTempatKerjaComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jarakTempatKerjaComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jarakTempatKerjaComboBox1ActionPerformed
+
+    private void lamaJalanComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamaJalanComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lamaJalanComboBox1ActionPerformed
+
+    private void jenisTransportComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisTransportComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jenisTransportComboBox1ActionPerformed
+
+    private void PekerjaanUtamaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PekerjaanUtamaButton1ActionPerformed
+        pekerjaanUtama.setPekerjaan((String) lapanganKerjaUtmTextField.getText());
+        pekerjaanUtama.setJenisPekerjaan((String) jenisKerjaUtmTextField.getText());
+        pekerjaanUtama.setLamaBekerja((int) LamaBekerjaSpinner.getValue());
+        pekerjaanUtama.setLamaMencari((int) LamaCariKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) SeninJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) SelasaJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) RabuJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) KamisJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) JumatJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) SabtuJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) MingguJamKerjaSpinner.getValue());
+        pekerjaanUtama.setJamkerja((JamKerja) SemingguJamKerjaSpinner.getValue());
+        pekerjaanUtama.setStatusPekerjaan((String) statusKedudukanKerjaComboBox.getSelectedItem());
+        pekerjaanUtama.setCaraPembukuan((String) caraPembukuanComboBox.getSelectedItem());
+        //pertanyaan 25
+        //pertanyaan 26
+        pekerjaanUtama.setSistemPengupahan((String) sistemPmbayaranComboBox2.getSelectedItem());
+        if(yaJamKesRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan kesehatan");
+        } else if(tidakJamKesRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan kesehatan");
+        } else if(tidakTahuJamKesRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan kesehatan");
+        }
+        if(yaJamKecKerjaRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan kecelakaan");
+        } else if(tidakJamKecKerjaRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan kecelakaan");
+        } else if(tidakTahuJamKecKerjaRadioButton2.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan kecelakaan");
+        }
+        if(yaJamTuaRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan hari tua");
+        } else if(tidakJamTuaRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan hari tua");
+        } else if(tidakTahuJamTuaRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan hari tua");
+        }
+        if(yaJamPensRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan pensiun");
+        } else if(tidakJamTuaRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan pensiun");
+        } else if(tidakTahuJamPensRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan pensiun");
+        }
+        if(yaJamMatiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan kematian");
+        } else if(tidakJamMatiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan kematian");
+        } else if(tidakTahuJamMatiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan kematian");
+        }
+        if(yaCutiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan cuti tanpa potong upah");
+        } else if(tidakCutiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan cuti tanpa potong upah");
+        } else if(tidakTahuCutiRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan cuti tanpa potong upah");
+        }
+        if(yaPesangonRadioButton.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Memiliki jaminan pesangon");
+        } else if(tidakPesangonRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak memiliki jaminan pesangon");
+        } else if(tidakTahuPesangonRadioButton1.isSelected()){
+            pekerjaanUtama.setLayananPerusahaan("Tidak tahu jika memiliki jaminan pesangon");
+        }
+        pekerjaanUtama.setPerjanjianKerja((String) sistemPmbayaranComboBox.getSelectedItem());
+        if(yaJamKesRadioButton3.isSelected()){
+            pekerjaanUtama.setSerikatPekerja("Terlibat serikat kerja");
+        } else if(tidakJamKesRadioButton3.isSelected()){
+            pekerjaanUtama.setSerikatPekerja("Tidak terlibat serikat kerja");
+        } else if(tidakTahuJamKesRadioButton3.isSelected()){
+            pekerjaanUtama.setSerikatPekerja("Tidak tahu jika ada serikat kerja");
+        }
+        pekerjaanUtama.setJenisInstansi((String) jenisInstansiComboBox.getSelectedItem());
+        pekerjaanUtama.setLokasiUtamaKerja((String) tempatKerjaComboBox1.getSelectedItem());
+        pekerjaanUtama.setTempatKerja((Lokasi) provNegTextField1.get());
+        pekerjaanUtama.setTempatKerja((Lokasi) kabKotaTextField1.getComponents());
+        if(setiapHariRadioButton1.isSelected()){
+            pekerjaanUtama.setFrekuensiPergiKerja("Setiap Hari");
+        } else if(setiapMingguRadioButton1.isSelected()){
+            pekerjaanUtama.setSerikatPekerja("Setiap Minggu");
+        } else if(setiapBulanRadioButton1.isSelected()){
+            pekerjaanUtama.setSerikatPekerja("Setiap Bulan");
+        }
+        pekerjaanUtama.setJarak((String) jarakTempatKerjaComboBox1.getSelectedItem());
+        pekerjaanUtama.setLamaPerjalanan((String) lamaJalanComboBox1.getSelectedItem());
+        pekerjaanUtama.setJenisTransportasi((String) jenisTransportComboBox1.getSelectedItem());     
+    }//GEN-LAST:event_PekerjaanUtamaButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSpinner JumatJamKerjaSpinner;
+    private javax.swing.JSpinner KamisJamKerjaSpinner;
+    private javax.swing.JSpinner LamaBekerjaSpinner;
+    private javax.swing.JSpinner LamaBekerjaSpinner1;
+    private javax.swing.JSpinner LamaCariKerjaSpinner;
+    private javax.swing.JSpinner LamaCariKerjaSpinner1;
+    private javax.swing.JSpinner MingguJamKerjaSpinner;
+    private javax.swing.JButton PekerjaanUtamaButton;
+    private javax.swing.JButton PekerjaanUtamaButton1;
+    private javax.swing.JSpinner RabuJamKerjaSpinner;
+    private javax.swing.JSpinner SabtuJamKerjaSpinner;
+    private javax.swing.JSpinner SelasaJamKerjaSpinner;
+    private javax.swing.JSpinner SemingguJamKerjaSpinner;
+    private javax.swing.JSpinner SeninJamKerjaSpinner;
     private javax.swing.JComboBox<String> caraPembukuanComboBox;
+    private javax.swing.JComboBox<String> caraPembukuanComboBox1;
     private javax.swing.ButtonGroup cutiButtonGroup;
     private javax.swing.JRadioButton dipakaiSndriNegatifRadioButton1;
+    private javax.swing.JRadioButton dipakaiSndriNegatifRadioButton2;
     private javax.swing.JRadioButton dipakaiSndriPositifRadioButton;
+    private javax.swing.JRadioButton dipakaiSndriPositifRadioButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1097,12 +2117,52 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinner4;
     private javax.swing.ButtonGroup jamKecKerjaButtonGroup;
     private javax.swing.JTextField jamKerjaBiasaTextField;
     private javax.swing.ButtonGroup jamKesButtonGroup;
@@ -1110,59 +2170,97 @@ public class PekerjaanUtamaPanel extends javax.swing.JPanel {
     private javax.swing.ButtonGroup jamPensButtonGroup;
     private javax.swing.ButtonGroup jamTuaButtonGroup;
     private javax.swing.JComboBox<String> jarakTempatKerjaComboBox;
+    private javax.swing.JComboBox<String> jarakTempatKerjaComboBox1;
     private javax.swing.JComboBox<String> jenisInstansiComboBox;
+    private javax.swing.JComboBox<String> jenisInstansiComboBox1;
     private javax.swing.JTextField jenisKerjaUtmTextField;
+    private javax.swing.JTextField jenisKerjaUtmTextField1;
     private javax.swing.JComboBox<String> jenisTransportComboBox;
+    private javax.swing.JComboBox<String> jenisTransportComboBox1;
     private javax.swing.JLabel judulDPanel;
+    private javax.swing.JLabel judulDPanel1;
     private javax.swing.JTextField jumatJamKerjaTextField;
     private javax.swing.JTextField kabKotaTextField;
+    private javax.swing.JTextField kabKotaTextField1;
     private javax.swing.JTextField kamisJamKerjaTextField;
     private javax.swing.JTextField lainyaInstansiTextField;
+    private javax.swing.JTextField lainyaInstansiTextField1;
     private javax.swing.JComboBox<String> lamaJalanComboBox;
-    private javax.swing.JTextField lamaKerjaUtmTextField;
-    private javax.swing.JTextField lamaKerjaUtmTextField1;
+    private javax.swing.JComboBox<String> lamaJalanComboBox1;
     private javax.swing.JTextField lapanganKerjaUtmTextField;
+    private javax.swing.JTextField lapanganKerjaUtmTextField1;
     private javax.swing.JTextField mingguJamKerjaTextField;
     private javax.swing.ButtonGroup pakaiSndiriButtonGroup;
     private javax.swing.ButtonGroup pesangonButtonGroup;
     private javax.swing.JTextField provNegTextField;
-    private javax.swing.JTextField rabuJamKerjaTextField;
+    private javax.swing.JTextField provNegTextField1;
     private javax.swing.JTextField sabtuJamKerjaTextField;
-    private javax.swing.JTextField selasaJamKerjaTextField;
-    private javax.swing.JTextField seninJamKerjaTextField;
     private javax.swing.ButtonGroup serikatKerjaButtonGroup;
     private javax.swing.JRadioButton setiapBulanRadioButton;
+    private javax.swing.JRadioButton setiapBulanRadioButton1;
     private javax.swing.JRadioButton setiapHariRadioButton;
+    private javax.swing.JRadioButton setiapHariRadioButton1;
     private javax.swing.JRadioButton setiapMingguRadioButton;
+    private javax.swing.JRadioButton setiapMingguRadioButton1;
     private javax.swing.JComboBox<String> sistemPmbayaranComboBox;
     private javax.swing.JComboBox<String> sistemPmbayaranComboBox1;
+    private javax.swing.JComboBox<String> sistemPmbayaranComboBox2;
+    private javax.swing.JComboBox<String> sistemPmbayaranComboBox3;
     private javax.swing.JComboBox<String> statusKedudukanKerjaComboBox;
+    private javax.swing.JComboBox<String> statusKedudukanKerjaComboBox1;
     private javax.swing.JComboBox<String> tempatKerjaComboBox;
+    private javax.swing.JComboBox<String> tempatKerjaComboBox1;
     private javax.swing.JRadioButton tidakCutiRadioButton;
+    private javax.swing.JRadioButton tidakCutiRadioButton1;
     private javax.swing.JRadioButton tidakJamKecKerjaRadioButton1;
+    private javax.swing.JRadioButton tidakJamKecKerjaRadioButton2;
     private javax.swing.JRadioButton tidakJamKesRadioButton;
     private javax.swing.JRadioButton tidakJamKesRadioButton1;
+    private javax.swing.JRadioButton tidakJamKesRadioButton2;
+    private javax.swing.JRadioButton tidakJamKesRadioButton3;
     private javax.swing.JRadioButton tidakJamMatiRadioButton;
+    private javax.swing.JRadioButton tidakJamMatiRadioButton1;
     private javax.swing.JRadioButton tidakJamPensRadioButton;
+    private javax.swing.JRadioButton tidakJamPensRadioButton1;
     private javax.swing.JRadioButton tidakJamTuaRadioButton;
+    private javax.swing.JRadioButton tidakJamTuaRadioButton1;
     private javax.swing.JRadioButton tidakPesangonRadioButton;
+    private javax.swing.JRadioButton tidakPesangonRadioButton1;
     private javax.swing.JRadioButton tidakTahuCutiRadioButton;
+    private javax.swing.JRadioButton tidakTahuCutiRadioButton1;
     private javax.swing.JRadioButton tidakTahuJamKecKerjaRadioButton1;
+    private javax.swing.JRadioButton tidakTahuJamKecKerjaRadioButton2;
     private javax.swing.JRadioButton tidakTahuJamKesRadioButton;
     private javax.swing.JRadioButton tidakTahuJamKesRadioButton1;
+    private javax.swing.JRadioButton tidakTahuJamKesRadioButton2;
+    private javax.swing.JRadioButton tidakTahuJamKesRadioButton3;
     private javax.swing.JRadioButton tidakTahuJamMatiRadioButton;
+    private javax.swing.JRadioButton tidakTahuJamMatiRadioButton1;
     private javax.swing.JRadioButton tidakTahuJamPensRadioButton;
+    private javax.swing.JRadioButton tidakTahuJamPensRadioButton1;
     private javax.swing.JRadioButton tidakTahuJamTuaRadioButton;
+    private javax.swing.JRadioButton tidakTahuJamTuaRadioButton1;
     private javax.swing.JRadioButton tidakTahuPesangonRadioButton;
+    private javax.swing.JRadioButton tidakTahuPesangonRadioButton1;
     private javax.swing.JTextField upahBarangTextField;
+    private javax.swing.JTextField upahBarangTextField1;
     private javax.swing.JTextField upahUangTextField;
+    private javax.swing.JTextField upahUangTextField1;
     private javax.swing.JRadioButton yaCutiRadioButton;
+    private javax.swing.JRadioButton yaCutiRadioButton1;
     private javax.swing.JRadioButton yaJamKecKerjaRadioButton1;
+    private javax.swing.JRadioButton yaJamKecKerjaRadioButton2;
     private javax.swing.JRadioButton yaJamKesRadioButton;
     private javax.swing.JRadioButton yaJamKesRadioButton1;
+    private javax.swing.JRadioButton yaJamKesRadioButton2;
+    private javax.swing.JRadioButton yaJamKesRadioButton3;
     private javax.swing.JRadioButton yaJamMatiRadioButton;
+    private javax.swing.JRadioButton yaJamMatiRadioButton1;
     private javax.swing.JRadioButton yaJamPensRadioButton;
+    private javax.swing.JRadioButton yaJamPensRadioButton1;
     private javax.swing.JRadioButton yaJamTuaRadioButton;
+    private javax.swing.JRadioButton yaJamTuaRadioButton1;
     private javax.swing.JRadioButton yaPesangonRadioButton;
+    private javax.swing.JRadioButton yaPesangonRadioButton1;
     // End of variables declaration//GEN-END:variables
 }
