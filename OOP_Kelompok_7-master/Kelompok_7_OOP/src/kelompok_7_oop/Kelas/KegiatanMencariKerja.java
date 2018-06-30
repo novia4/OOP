@@ -16,9 +16,9 @@ public class KegiatanMencariKerja {
     private String mencariKerja;
     private String mempersiapkanUsaha;
     private int lamaMencariKerja;
-    private ArrayList alasanMencariKerja;
-    private ArrayList upayaMencariKerja;
-    private ArrayList alasanTdkMncariKerja;
+    private String alasanMencariKerja;
+    private ArrayList<String>  upayaMencariKerja=new ArrayList<>();
+    private String  alasanTdkMncariKerja;
     private String mulaiPekerjaan;
     private String menerimaTawaran;
     private String siapKerja;
@@ -28,6 +28,8 @@ public class KegiatanMencariKerja {
     public String getMencariKerja(){
         return mencariKerja;    
     }
+    
+    
     
     public void setMencariKerja(String mencariKerja) {
         this.mencariKerja = mencariKerja;
@@ -45,32 +47,32 @@ public class KegiatanMencariKerja {
         return lamaMencariKerja;    
     }
     
-    public void setLamaMencariKerja(String LamaMencariKerja) {
+    public void setLamaMencariKerja(int LamaMencariKerja) {
         this.lamaMencariKerja = lamaMencariKerja;
     }
     
-      public ArrayList getAlasanMencariKerja(){
+      public String getAlasanMencariKerja(){
         return alasanMencariKerja;    
     }
     
     public void setAlasanMencariKerja(String alasanMencariKerja) {
-        this.alasanMencariKerja.add(alasanMencariKerja);
+        this.alasanMencariKerja = alasanMencariKerja;
     }
     
       public ArrayList getUpayaMencariKerja(){
         return upayaMencariKerja;    
     }
     
-    public void setUpayaMencariKerja(String upayaMencariKerja) {
+    public void addUpayaMencariKerja(String upayaMencariKerja) {
         this.upayaMencariKerja.add(upayaMencariKerja);
     }
     
-      public ArrayList getAlasanTdkMencariKerja(){
+    public String getAlasanTdkMencariKerja(){
         return alasanTdkMncariKerja;    
     }
     
     public void setAlasanTdkMencariKerja(String alasanTdkMencariKerja) {
-        this.alasanTdkMncariKerja.add(alasanTdkMencariKerja);
+        this.alasanTdkMncariKerja = alasanTdkMencariKerja;
     }
     
     public String getMulaiPekerjaan(){
@@ -112,5 +114,12 @@ public class KegiatanMencariKerja {
 //    public void setUpah(Array upah) {
 //        this.upah = upah;
 //    }
+
+    /**
+     * @param mulaiPekerjaan the mulaiPekerjaan to set
+     */
+    public void setMulaiPekerjaan(String mulaiPekerjaan) {
+        this.mulaiPekerjaan = mulaiPekerjaan;
+    }
     
 }

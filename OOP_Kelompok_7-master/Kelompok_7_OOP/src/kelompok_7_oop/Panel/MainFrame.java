@@ -22,7 +22,7 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
 //        mainScrollPane.setPreferredSize(new Dimension(150,100));
         this.setLocationRelativeTo(null);
-        mainScrollPane.setViewportView(new LandingPanel(mainScrollPane));
+        mainScrollPane.setViewportView();
 
     }
 

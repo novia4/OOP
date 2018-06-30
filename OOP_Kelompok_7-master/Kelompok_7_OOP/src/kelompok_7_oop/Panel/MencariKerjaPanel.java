@@ -5,9 +5,16 @@
  */
 package kelompok_7_oop.Panel;
 
+import java.util.ArrayList;
+import java.util.Enumeration;
 import static javafx.scene.input.KeyCode.J;
+import javax.swing.AbstractButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import kelompok_7_oop.Kelas.AnggotaRuta;
+import kelompok_7_oop.Kelas.KegiatanMencariKerja;
+
 
 /**
  *
@@ -16,10 +23,25 @@ import kelompok_7_oop.Kelas.AnggotaRuta;
 public class MencariKerjaPanel extends javax.swing.JPanel {
     private JScrollPane mainScrollPane;
     private AnggotaRuta art;
+    KegiatanMencariKerja kmk = new KegiatanMencariKerja();
+   
     /**
      * Creates new form MencariKerjaPanel
      */
+    private String getSelected(ButtonGroup bg) {
+        for (Enumeration<AbstractButton> buttons = bg.getElements(); buttons.hasMoreElements();) {
+            AbstractButton button = buttons.nextElement();
+
+            if (button.isSelected()) {
+                return button.getText();
+            }
+        }
+        return "tidak valid";
+    }
     public MencariKerjaPanel(JScrollPane mainScrollPane, AnggotaRuta ruta) {
+     
+        
+        
         initComponents();
         this.mainScrollPane=mainScrollPane;
         this.art=ruta;
@@ -50,7 +72,6 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         lainnyaUpayaKerjaTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        lamaMencariKerjaField1 = new javax.swing.JTextField();
         alasanTdkMencariKerjaComboBox = new javax.swing.JComboBox<>();
         melamarKerjaCheckBox = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
@@ -78,6 +99,8 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         mauKerjaNegatifRadioButton3 = new javax.swing.JRadioButton();
         mauKerjaPositifRadioButton4 = new javax.swing.JRadioButton();
+        nextButton = new javax.swing.JButton();
+        lamaMencariKerjaSpinner = new javax.swing.JSpinner();
 
         judulCPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         judulCPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -244,17 +267,82 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
         inginKerjaButtonGroup.add(mauKerjaPositifRadioButton4);
         mauKerjaPositifRadioButton4.setText("Ya");
 
+        nextButton.setText("next");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(97, 97, 97))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(judulCPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lainnyaAlasanTdkMencariKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(alasanTdkMencariKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(persiapanUsahaPositifRadioButton)
+                                        .addGap(49, 49, 49)
+                                        .addComponent(persiapanUsahaNegatifRadioButton1))
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lainnyaUpayaKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(melamarKerjaCheckBox)
+                                            .addComponent(lainnyaKerjaCheckBox)
+                                            .addComponent(perizinanUsahaCheckBox)
+                                            .addComponent(mencariTptUshCheckBox)
+                                            .addComponent(kumpulModalCheckBox)
+                                            .addComponent(hubungiKeluargaCheckBox)
+                                            .addComponent(iklanDiriCheckBox)
+                                            .addComponent(lamarIklanKerjaCheckBox)
+                                            .addComponent(menghubungiPerusahaanCheckBox)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(11, 11, 11)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lainnyaAlasanMencariKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(alasanMencariKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(mauKerjaPositifRadioButton4)
+                                                .addGap(49, 49, 49)
+                                                .addComponent(mauKerjaNegatifRadioButton3))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(mulaiKerjaPositifRadioButton3)
+                                                .addGap(49, 49, 49)
+                                                .addComponent(mulaiKerjaNegatifRadioButton2))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(terimaKerjaPositifRadioButton2)
+                                                .addGap(49, 49, 49)
+                                                .addComponent(terimaKerjaNegatifRadioButton1))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(memulaiUsahaPositifRadioButton1)
+                                                .addGap(49, 49, 49)
+                                                .addComponent(memulaiUsahaNegatifRadioButton)))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(judulCPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
@@ -262,70 +350,18 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
                                         .addGap(49, 49, 49)
                                         .addComponent(mencariKerjaNegatifRadioButton))
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(lamaMencariKerjaField1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(persiapanUsahaPositifRadioButton)
-                                    .addGap(49, 49, 49)
-                                    .addComponent(persiapanUsahaNegatifRadioButton1))
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lainnyaUpayaKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(melamarKerjaCheckBox)
-                                        .addComponent(lainnyaKerjaCheckBox)
-                                        .addComponent(perizinanUsahaCheckBox)
-                                        .addComponent(mencariTptUshCheckBox)
-                                        .addComponent(kumpulModalCheckBox)
-                                        .addComponent(hubungiKeluargaCheckBox)
-                                        .addComponent(iklanDiriCheckBox)
-                                        .addComponent(lamarIklanKerjaCheckBox)
-                                        .addComponent(menghubungiPerusahaanCheckBox)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(11, 11, 11)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lainnyaAlasanMencariKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(alasanMencariKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lainnyaAlasanTdkMencariKerjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(alasanTdkMencariKerjaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
+                                .addGap(0, 250, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(mauKerjaPositifRadioButton4)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(mauKerjaNegatifRadioButton3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(mulaiKerjaPositifRadioButton3)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(mulaiKerjaNegatifRadioButton2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(terimaKerjaPositifRadioButton2)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(terimaKerjaNegatifRadioButton1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(memulaiUsahaPositifRadioButton1)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(memulaiUsahaNegatifRadioButton)))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lamaMencariKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 135, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,7 +383,7 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lamaMencariKerjaField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lamaMencariKerjaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -406,7 +442,9 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mauKerjaPositifRadioButton4)
                     .addComponent(mauKerjaNegatifRadioButton3))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -470,6 +508,55 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_mauKerjaNegatifRadioButton3ActionPerformed
 
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+
+        kmk.setMencariKerja(getSelected(mencariKerjaGroup));
+        kmk.setMempersiapkanUsaha(getSelected(mempersiapkanUsahaGroup));
+        kmk.setLamaMencariKerja(Integer.parseInt(lamaMencariKerjaSpinner.getValue().toString()));
+        kmk.setAlasanMencariKerja(alasanMencariKerjaComboBox.getSelectedItem().toString());
+        if(alasanMencariKerjaComboBox.getSelectedItem()=="Lainnya"){
+            kmk.setAlasanMencariKerja(lainnyaAlasanMencariKerjaTextField.getText());
+        }
+        if(melamarKerjaCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(melamarKerjaCheckBox.getText());
+        }
+        if(menghubungiPerusahaanCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(menghubungiPerusahaanCheckBox.getText());
+        }
+        if(lamarIklanKerjaCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(lamarIklanKerjaCheckBox.getText());
+        }
+        if(iklanDiriCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(iklanDiriCheckBox.getText());
+        }
+        if(hubungiKeluargaCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(hubungiKeluargaCheckBox.getText());
+        }
+        if(kumpulModalCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(kumpulModalCheckBox.getText());
+        }
+        if(mencariTptUshCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(mencariTptUshCheckBox.getText());
+        }
+        if(perizinanUsahaCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(melamarKerjaCheckBox.getText());
+        }
+        if(lainnyaKerjaCheckBox.isSelected()){
+            kmk.addUpayaMencariKerja(lainnyaUpayaKerjaTextField.getText());
+        }
+        
+        kmk.setAlasanTdkMencariKerja(alasanTdkMencariKerjaComboBox.getSelectedItem().toString());
+        if (alasanTdkMencariKerjaComboBox.getSelectedItem().toString().equalsIgnoreCase("Lainnya")){  
+            kmk.setAlasanTdkMencariKerja(lainnyaAlasanTdkMencariKerjaTextField.getText());
+        }
+        kmk.setMulaiPekerjaan(getSelected(mulaiKerjaButtonGroup));
+        kmk.setMenerimaTawaran(getSelected(tawarankerjaButtonGroup));
+        kmk.setSiapKerja(getSelected(mulaiKerjaButtonGroup));
+        kmk.setInginPekerjaan(getSelected(inginKerjaButtonGroup));
+        JOptionPane.showMessageDialog(this, "Success");
+
+    }//GEN-LAST:event_nextButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> alasanMencariKerjaComboBox;
@@ -494,7 +581,7 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
     private javax.swing.JTextField lainnyaAlasanTdkMencariKerjaTextField;
     private javax.swing.JCheckBox lainnyaKerjaCheckBox;
     private javax.swing.JTextField lainnyaUpayaKerjaTextField;
-    private javax.swing.JTextField lamaMencariKerjaField1;
+    private javax.swing.JSpinner lamaMencariKerjaSpinner;
     private javax.swing.JCheckBox lamarIklanKerjaCheckBox;
     private javax.swing.JRadioButton mauKerjaNegatifRadioButton3;
     private javax.swing.JRadioButton mauKerjaPositifRadioButton4;
@@ -510,6 +597,7 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
     private javax.swing.ButtonGroup mulaiKerjaButtonGroup;
     private javax.swing.JRadioButton mulaiKerjaNegatifRadioButton2;
     private javax.swing.JRadioButton mulaiKerjaPositifRadioButton3;
+    private javax.swing.JButton nextButton;
     private javax.swing.JCheckBox perizinanUsahaCheckBox;
     private javax.swing.JRadioButton persiapanUsahaNegatifRadioButton1;
     private javax.swing.JRadioButton persiapanUsahaPositifRadioButton;
@@ -517,4 +605,5 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
     private javax.swing.JRadioButton terimaKerjaNegatifRadioButton1;
     private javax.swing.JRadioButton terimaKerjaPositifRadioButton2;
     // End of variables declaration//GEN-END:variables
+
 }
