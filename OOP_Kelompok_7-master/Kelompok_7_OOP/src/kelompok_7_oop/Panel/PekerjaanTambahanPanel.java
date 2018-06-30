@@ -5,6 +5,8 @@
  */
 package kelompok_7_oop.Panel;
 
+import javax.swing.JScrollPane;
+import kelompok_7_oop.Kelas.AnggotaRuta;
 import kelompok_7_oop.Kelas.PekerjaanTambahan;
 
 /**
@@ -14,9 +16,13 @@ import kelompok_7_oop.Kelas.PekerjaanTambahan;
 public class PekerjaanTambahanPanel extends javax.swing.JPanel {
 
     PekerjaanTambahan pekerjaanTambahan = new PekerjaanTambahan();
+    JScrollPane mainScrollPane;
+    AnggotaRuta art;
     
-    public PekerjaanTambahanPanel() {
+    public PekerjaanTambahanPanel(JScrollPane mainJScrollPane, AnggotaRuta art) {
         initComponents();
+        this.mainScrollPane=mainJScrollPane;
+        this.art=art;
     }
 
     /**
@@ -37,7 +43,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
         negatifRadioButton = new javax.swing.JRadioButton();
         PekerjaanTambahanTextField = new javax.swing.JTextField();
         PekerjaanTambahanComboBox = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        nextButton = new javax.swing.JButton();
 
         PekerjaanTambahanjLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         PekerjaanTambahanjLabel.setText("V.E. PEKERJAAN TAMBAHAN");
@@ -73,10 +79,10 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("NEXT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        nextButton.setText("NEXT");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                nextButtonActionPerformed(evt);
             }
         });
 
@@ -108,7 +114,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(nextButton)
                 .addGap(52, 52, 52))
         );
         layout.setVerticalGroup(
@@ -131,7 +137,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(PekerjaanTambahanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(nextButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -140,7 +146,7 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_positifRadioButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
 
         if(positifRadioButton.isSelected()){
             pekerjaanTambahan.setPekerjaan("Memiliki pekerjaan tambahan.");
@@ -148,8 +154,11 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
             pekerjaanTambahan.setPekerjaan("Tidak memiliki pekerjaan tambahan.");
         }
         pekerjaanTambahan.setPekerjaan(PekerjaanTambahanTextField.getText());
-        pekerjaanTambahan.setStatusPekerjaan((String) PekerjaanTambahanComboBox.getSelectedItem());
-    }//GEN-LAST:event_jButton1ActionPerformed
+        pekerjaanTambahan.setStatusPekerjaan(PekerjaanTambahanComboBox.getSelectedItem().toString());
+        art.setPekerjaanTambahan(pekerjaanTambahan);
+        
+        mainScrollPane.setViewportView(new JamKerjaKeseluruhanPanel(mainScrollPane, art));
+    }//GEN-LAST:event_nextButtonActionPerformed
 
     private void PekerjaanTambahanTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PekerjaanTambahanTextFieldActionPerformed
         // TODO add your handling code here:
@@ -164,11 +173,11 @@ public class PekerjaanTambahanPanel extends javax.swing.JPanel {
     private javax.swing.JTextField PekerjaanTambahanTextField;
     private javax.swing.JLabel PekerjaanTambahanjLabel;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JRadioButton negatifRadioButton;
+    private javax.swing.JButton nextButton;
     private javax.swing.JRadioButton positifRadioButton;
     // End of variables declaration//GEN-END:variables
 }

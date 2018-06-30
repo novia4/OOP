@@ -6,7 +6,10 @@
 package kelompok_7_oop.Panel;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JScrollPane;
+import kelompok_7_oop.Kelas.AnggotaRuta;
 import kelompok_7_oop.Kelas.PengalamanKerja;
+import kelompok_7_oop.Kelas.Suplemen;
 
 /**
  *
@@ -15,12 +18,16 @@ import kelompok_7_oop.Kelas.PengalamanKerja;
 public class PengalamanKerjaPanel extends javax.swing.JPanel {
 
     PengalamanKerja pengalamanKerja = new PengalamanKerja();
+    private JScrollPane mainScrollPane;
+    private AnggotaRuta art;
     
     /**
      * Creates new form PengalamanKerjaPanel
      */
-    public PengalamanKerjaPanel() {
+    public PengalamanKerjaPanel(JScrollPane mainScrollPane, AnggotaRuta art) {
         initComponents();
+        this.mainScrollPane=mainScrollPane;
+        this.art = art;
     }
 
     /**
@@ -262,6 +269,8 @@ public class PengalamanKerjaPanel extends javax.swing.JPanel {
         if(luarNegeriPositifRadioButton.isSelected()){
             pengalamanKerja.setBekerjaDiLuarNegeri(pernahDiLuarNegeriTextField.getText());
         }
+        
+        mainScrollPane.setViewportView(new SuplemenPanel(mainScrollPane, art));
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void alasanBerhentiKerjaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alasanBerhentiKerjaComboBoxActionPerformed

@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,6 +19,7 @@ import java.util.logging.Logger;
  * @author USER-PC
  */
 public class AnggotaRuta {
+
     private String nama;
     private String hubunganDgKRT;
     private String gender;
@@ -27,6 +29,17 @@ public class AnggotaRuta {
     private String statSekolah;
     private KarakteristikUmum karateristikUmum;
     private KegiatanMingguLalu mingguLalu;
+    private Pekerjaan pekerjaan;
+    private PekerjaanTambahan PekerjaanTambahan;
+
+    public Pekerjaan getPekerjaan() {
+        return this.pekerjaan;
+    }
+
+    public void setPekerjaan(Pekerjaan pekerjaan) {
+        this.pekerjaan = pekerjaan;
+    }
+
     /**
      * @return the nama
      */
@@ -124,23 +137,40 @@ public class AnggotaRuta {
     public void setStatSekolah(String statSekolah) {
         this.statSekolah = statSekolah;
     }
-    public int getUmur(int tahunLahir){
+
+    public int getUmur(int tahunLahir) {
         Date date = new Date();
-        int time =date.getYear() -tahunLahir+1900;
-        if(date.getMonth()>this.bulanLahir){
-        time++;
-    }
+        int time = date.getYear() - tahunLahir + 1900;
+        if (date.getMonth() > this.bulanLahir) {
+            time++;
+        }
         return time;
     }
-    public KarakteristikUmum getKarakteristikUmum(){
+
+    public KarakteristikUmum getKarakteristikUmum() {
         return karateristikUmum;
     }
-    
-    public void setKegiatanMingguLalu(KegiatanMingguLalu km){
+
+    public void setKegiatanMingguLalu(KegiatanMingguLalu km) {
         this.mingguLalu = km;
     }
-    public void setKarakteristikUmum(KarakteristikUmum ku){
-        this.karateristikUmum=ku;
+
+    public void setKarakteristikUmum(KarakteristikUmum ku) {
+        this.karateristikUmum = ku;
+    }
+
+    /**
+     * @return the PekerjaanTambahan
+     */
+    public PekerjaanTambahan getPekerjaanTambahan() {
+        return PekerjaanTambahan;
+    }
+
+    /**
+     * @param PekerjaanTambahan the PekerjaanTambahan to set
+     */
+    public void setPekerjaanTambahan(PekerjaanTambahan PekerjaanTambahan) {
+        this.PekerjaanTambahan = PekerjaanTambahan;
     }
 
 }

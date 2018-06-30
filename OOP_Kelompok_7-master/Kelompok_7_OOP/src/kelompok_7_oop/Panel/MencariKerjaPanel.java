@@ -553,7 +553,8 @@ public class MencariKerjaPanel extends javax.swing.JPanel {
         kmk.setMenerimaTawaran(getSelected(tawarankerjaButtonGroup));
         kmk.setSiapKerja(getSelected(mulaiKerjaButtonGroup));
         kmk.setInginPekerjaan(getSelected(inginKerjaButtonGroup));
-        JOptionPane.showMessageDialog(this, "Success");
+//        JOptionPane.showMessageDialog(this, "Success");
+        mainScrollPane.setViewportView(new PekerjaanUtamaPanel(mainScrollPane, art));
 
     }//GEN-LAST:event_nextButtonActionPerformed
 

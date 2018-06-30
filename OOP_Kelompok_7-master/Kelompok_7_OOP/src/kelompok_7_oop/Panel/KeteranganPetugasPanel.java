@@ -264,7 +264,6 @@ public class KeteranganPetugasPanel extends javax.swing.JPanel {
         pws.setKode(kodePengawasTextField.getText());
         pws.addPencacah(pcc);
         
-        Database.getInstance().addPengawas(pws);
         
 //        ArrayList<Pengawas> ppws = Database.getInstance().getAllPengawas();
 //        for(Pengawas a: ppws){
@@ -272,7 +271,7 @@ public class KeteranganPetugasPanel extends javax.swing.JPanel {
 //            String tmp = temp.get(0).getRutaByNoKodeSample("2").getAlamat().getNegaraAtauProv();
 //            System.out.println(tmp);
 //        }
-        mainScrollPane.setViewportView(new TableAnggotaRutaPanel(mainScrollPane,ruta));
+        mainScrollPane.setViewportView(new TableAnggotaRutaPanel(mainScrollPane,ruta,pws));
     }//GEN-LAST:event_nextButtonPanelMouseClicked
 
     private void nextButtonPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonPanelMouseEntered

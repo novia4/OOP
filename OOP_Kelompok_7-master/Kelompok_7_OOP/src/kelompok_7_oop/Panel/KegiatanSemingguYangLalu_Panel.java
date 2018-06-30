@@ -669,6 +669,7 @@ public class KegiatanSemingguYangLalu_Panel extends javax.swing.JPanel {
         mingguLalu.setJaminanKembaliKerja(getSelected(jaminanKembaliBekerjabuttonGroup));
 
         art.setKegiatanMingguLalu(mingguLalu);
+        mainScrollPane.setViewportView(new MencariKerjaPanel(mainScrollPane, art));
     }//GEN-LAST:event_buttonNextPanelMouseClicked
 
 

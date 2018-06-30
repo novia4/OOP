@@ -10,7 +10,7 @@ package kelompok_7_oop.Kelas;
  * @author maya
  */
 public class Pekerjaan {
-    private String pekerjaan;
+    private String jabatan;
     private String jenisPekerjaan;
     private int lamaBekerja;
     private int lamaMencari;
@@ -32,19 +32,20 @@ public class Pekerjaan {
     public Pekerjaan(){
         this.jamkerja = new JamKerja();
         this.layananPerusahaan=new FasilitasPekerjaan();
+        this.tempatKerja = new Lokasi();
     }
     /**
      * @return the pekerjaan
      */
-    public String getPekerjaan() {
-        return pekerjaan;
+    public String getJabatan() {
+        return jabatan;
     }
 
     /**
      * @param pekerjaan the pekerjaan to set
      */
-    public void setPekerjaan(String pekerjaan) {
-        this.pekerjaan = pekerjaan;
+    public void setJabatan(String jabatan) {
+        this.jabatan = jabatan;
     }
 
     /**

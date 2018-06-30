@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 import kelompok_7_oop.Kelas.AnggotaRuta;
+import kelompok_7_oop.Kelas.Database;
+import kelompok_7_oop.Kelas.Pengawas;
 import kelompok_7_oop.Kelas.Ruta;
 
 /**
@@ -26,6 +28,7 @@ public class TableAnggotaRutaPanel extends javax.swing.JPanel {
     private AnggotaRuta art = null;
     private Ruta ruta;
     private JScrollPane mainScrollPane;
+    private Pengawas pengawas;
     /**
      * Creates new form TableRutaPanel
      */
@@ -33,6 +36,12 @@ public class TableAnggotaRutaPanel extends javax.swing.JPanel {
         initComponents();
         this.mainScrollPane=mainScrollPane;
         this.ruta=ruta;
+    }
+    public TableAnggotaRutaPanel(JScrollPane mainScrollPane, Ruta ruta, Pengawas pengawas) {
+        initComponents();
+        this.mainScrollPane=mainScrollPane;
+        this.ruta=ruta;
+        this.pengawas = pengawas;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -239,7 +248,12 @@ public class TableAnggotaRutaPanel extends javax.swing.JPanel {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-        mainScrollPane.setViewportView(new KarakteristikUmumPanel(mainScrollPane, art));
+        for(AnggotaRuta a: ruta.getAllArt()){
+            if(a.getUmur(a.getTahunLahir())>10){
+                mainScrollPane.setViewportView(new KarakteristikUmumPanel(mainScrollPane, a));
+            }
+        }
+        Database.getInstance().addPengawas(pengawas);
     }//GEN-LAST:event_jPanel3MouseClicked
 
 

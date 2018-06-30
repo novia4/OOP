@@ -34,6 +34,9 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         initComponents();
         this.mainScrollPane = mainScrollPane;
         this.art = art;
+        this.setFocusable(true);
+    }
+    private void comboBoxListener(){
         ijazahComboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,7 +49,6 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
     }
-
     private String getSelected(ButtonGroup bg) {
         for (Enumeration<AbstractButton> buttons = bg.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
@@ -115,13 +117,16 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         parahGangguanLainnyaRadioButton = new javax.swing.JRadioButton();
         buttonNextPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        judulAPanel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        judulAPanel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         judulAPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         judulAPanel.setText("V.A. KARAKTERISTIK UMUM");
 
-        jLabel2.setText("1.a. Apakah ijazah STTB yang dimiliki (Nama)?");
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel2.setText("Ijazah STTB yang dimiliki:");
 
+        ijazahComboBox.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         ijazahComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tidak punya ijazah SD", "Paket A", "SDLB", "SD/MI", "Paket B", "SMPLB", "SMP/MTs", "Paket C", "SMLB", "SMA/MA", "SMK/MAK", "Diploma I/II", "Diploma III", "Diploma IV/S1", "S2", "S3" }));
         ijazahComboBox.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
@@ -129,20 +134,27 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setText("b. Jurusan pendidikan/bidang studi:");
+        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel3.setText("Jurusan pendidikan/bidang studi:");
 
+        bidangStudiTextField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        bidangStudiTextField.setForeground(new java.awt.Color(195, 197, 196));
+        bidangStudiTextField.setText("Jurusan pendidikan");
         bidangStudiTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bidangStudiTextFieldActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("c. Apakah (nama) pernah mendapat pelatihan kerja: ");
+        jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel4.setText("Pernah mendapat pelatihan kerja: ");
 
         pelatihanKerjaButtonGroup.add(pelatihanKerjaPositifRadioButton);
+        pelatihanKerjaPositifRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         pelatihanKerjaPositifRadioButton.setText("Ya");
 
         pelatihanKerjaButtonGroup.add(negatifPelatihanKerjaRadioButton);
+        negatifPelatihanKerjaRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         negatifPelatihanKerjaRadioButton.setText("Tidak");
         negatifPelatihanKerjaRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,36 +162,56 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setText("2. Kewarganegaraan (nama):");
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel5.setText("Kewarganegaraan (nama):");
 
+        kabKotaTextField.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        kabKotaTextField.setForeground(new java.awt.Color(195, 197, 196));
+        kabKotaTextField.setText("Kab/kota");
         kabKotaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kabKotaTextFieldActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("3. Tempat tinggal (nama) lima tahun lalu:");
+        jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel6.setText("Tempat tinggal (nama) lima tahun lalu:");
 
+        kewarganegaraanTextField1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        kewarganegaraanTextField1.setForeground(new java.awt.Color(195, 197, 196));
+        kewarganegaraanTextField1.setText("Warganegara");
         kewarganegaraanTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kewarganegaraanTextField1ActionPerformed(evt);
             }
         });
 
+        provinsiTextField.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        provinsiTextField.setForeground(new java.awt.Color(195, 197, 196));
+        provinsiTextField.setText("Negara/provinsi");
+        provinsiTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                provinsiTextFieldFocusGained(evt);
+            }
+        });
         provinsiTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 provinsiTextFieldActionPerformed(evt);
             }
         });
 
-        jLabel7.setText("4. Kesulitan/gangguan yang pernah dialami:");
+        jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel7.setText("Kesulitan/gangguan yang pernah dialami:");
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel8.setText("a. Pengelihatan");
 
         penglihatanButtonGroup.add(tidakGangguanPenglihatanRadioButton);
+        tidakGangguanPenglihatanRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanPenglihatanRadioButton.setText("Tidak");
 
         penglihatanButtonGroup.add(parahGangguanPenglihatanRadioButton);
+        parahGangguanPenglihatanRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanPenglihatanRadioButton.setText("Parah");
         parahGangguanPenglihatanRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +220,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         penglihatanButtonGroup.add(sedangGangguanPenglihatanRadioButton);
+        sedangGangguanPenglihatanRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanPenglihatanRadioButton.setText("Sedang");
         sedangGangguanPenglihatanRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,9 +228,11 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel9.setText("b. Pendengaran");
 
         pendengaranButtonGroup.add(parahGangguanPennglihatanRadioButton);
+        parahGangguanPennglihatanRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanPennglihatanRadioButton.setText("Parah");
         parahGangguanPennglihatanRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +241,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         pendengaranButtonGroup.add(sedangGangguanPendengaranRadioButton);
+        sedangGangguanPendengaranRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanPendengaranRadioButton.setText("Sedang");
         sedangGangguanPendengaranRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,14 +250,18 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         pendengaranButtonGroup.add(tidakGangguanPendengaranRadioButton);
+        tidakGangguanPendengaranRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanPendengaranRadioButton.setText("Tidak");
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel10.setText("c. Mobilitas");
 
         mobilitasButtonGroup.add(tidakGangguanMobRadioButton);
+        tidakGangguanMobRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanMobRadioButton.setText("Tidak");
 
         mobilitasButtonGroup.add(sedangGangguanMobRadioButton);
+        sedangGangguanMobRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanMobRadioButton.setText("Sedang");
         sedangGangguanMobRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,6 +270,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         mobilitasButtonGroup.add(parahGangguanMobRadioButton);
+        parahGangguanMobRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanMobRadioButton.setText("Parah");
         parahGangguanMobRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,12 +278,15 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel11.setText("d. Menggerakan Jari/Tangan");
 
         gerakanJariButtonGroup.add(tidakGangguanJariRadioButton);
+        tidakGangguanJariRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanJariRadioButton.setText("Tidak");
 
         gerakanJariButtonGroup.add(sedangGangguanJariRadioButton);
+        sedangGangguanJariRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanJariRadioButton.setText("Sedang");
         sedangGangguanJariRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +295,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         gerakanJariButtonGroup.add(parahGangguanJarRadioButton);
+        parahGangguanJarRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanJarRadioButton.setText("Parah");
         parahGangguanJarRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,12 +303,15 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel12.setText("e. Berbicara/Berkomunikasi");
 
         caraKomunikasiButtonGroup.add(tidakGangguanKomRadioButton);
+        tidakGangguanKomRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanKomRadioButton.setText("Tidak");
 
         caraKomunikasiButtonGroup.add(sedangGangguanKomRadioButton);
+        sedangGangguanKomRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanKomRadioButton.setText("Sedang");
         sedangGangguanKomRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,6 +320,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         caraKomunikasiButtonGroup.add(parahGangguanKomRadioButton);
+        parahGangguanKomRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanKomRadioButton.setText("Parah");
         parahGangguanKomRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,9 +328,11 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel13.setText("f. Mengingat, prilaku, dan lainnya");
 
         linnyaButtonGroup.add(tidakGangguanLainnyaRadioButton);
+        tidakGangguanLainnyaRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         tidakGangguanLainnyaRadioButton.setText("Tidak");
         tidakGangguanLainnyaRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,6 +341,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         linnyaButtonGroup.add(sedangGangguanRadioButton);
+        sedangGangguanRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         sedangGangguanRadioButton.setText("Sedang");
         sedangGangguanRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,6 +350,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         });
 
         linnyaButtonGroup.add(parahGangguanLainnyaRadioButton);
+        parahGangguanLainnyaRadioButton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         parahGangguanLainnyaRadioButton.setText("Parah");
         parahGangguanLainnyaRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,100 +391,100 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(judulAPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(ijazahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jSeparator1)
+                                    .addComponent(bidangStudiTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
                                     .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addComponent(pelatihanKerjaPositifRadioButton)
                                         .addGap(49, 49, 49)
-                                        .addComponent(negatifPelatihanKerjaRadioButton))))
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tidakGangguanMobRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(sedangGangguanMobRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(parahGangguanMobRadioButton))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(108, 108, 108)
-                                            .addComponent(tidakGangguanPendengaranRadioButton)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(sedangGangguanPendengaranRadioButton)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(parahGangguanPennglihatanRadioButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(106, 106, 106)
-                                            .addComponent(tidakGangguanPenglihatanRadioButton)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(sedangGangguanPenglihatanRadioButton)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(parahGangguanPenglihatanRadioButton))))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tidakGangguanJariRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(sedangGangguanJariRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(parahGangguanJarRadioButton))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel12)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tidakGangguanKomRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(sedangGangguanKomRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(parahGangguanKomRadioButton))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel13)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tidakGangguanLainnyaRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(sedangGangguanRadioButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(parahGangguanLainnyaRadioButton)))
-                            .addComponent(jLabel8)))
-                    .addComponent(judulAPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(bidangStudiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(151, 151, 151)
+                                        .addComponent(negatifPelatihanKerjaRadioButton))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(2, 2, 2)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel5)
+                                            .addComponent(kewarganegaraanTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(ijazahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(117, 117, 117)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(kabKotaTextField)
-                                    .addComponent(provinsiTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel10)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(tidakGangguanMobRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(sedangGangguanMobRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(parahGangguanMobRadioButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel9)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(108, 108, 108)
+                                                    .addComponent(tidakGangguanPendengaranRadioButton)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(sedangGangguanPendengaranRadioButton)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(parahGangguanPennglihatanRadioButton))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(106, 106, 106)
+                                                    .addComponent(tidakGangguanPenglihatanRadioButton)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(sedangGangguanPenglihatanRadioButton)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(parahGangguanPenglihatanRadioButton))))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel11)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(tidakGangguanJariRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(sedangGangguanJariRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(parahGangguanJarRadioButton))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel12)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(tidakGangguanKomRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(sedangGangguanKomRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(parahGangguanKomRadioButton))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel13)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(tidakGangguanLainnyaRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(sedangGangguanRadioButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(parahGangguanLainnyaRadioButton)))
+                                    .addComponent(jLabel8)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(kabKotaTextField)
+                                        .addComponent(provinsiTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))))
+                        .addGap(0, 28, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(40, 40, 40)
-                    .addComponent(kewarganegaraanTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(544, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -439,23 +492,27 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(judulAPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ijazahComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(provinsiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(kabKotaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(kabKotaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bidangStudiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bidangStudiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -463,7 +520,9 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
                             .addComponent(pelatihanKerjaPositifRadioButton)
                             .addComponent(negatifPelatihanKerjaRadioButton))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel5))
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(kewarganegaraanTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
@@ -500,14 +559,9 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
                             .addComponent(tidakGangguanLainnyaRadioButton)
                             .addComponent(sedangGangguanRadioButton)
                             .addComponent(parahGangguanLainnyaRadioButton))))
-                .addGap(19, 19, 19)
+                .addGap(36, 36, 36)
                 .addComponent(buttonNextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(285, 285, 285)
-                    .addComponent(kewarganegaraanTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(139, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -615,6 +669,11 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
         mainScrollPane.setViewportView(new KegiatanSemingguYangLalu_Panel(mainScrollPane, art));
     }//GEN-LAST:event_buttonNextPanelMouseClicked
 
+    private void provinsiTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_provinsiTextFieldFocusGained
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_provinsiTextFieldFocusGained
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bidangStudiTextField;
@@ -635,6 +694,7 @@ public class KarakteristikUmumPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel judulAPanel;
     private javax.swing.JTextField kabKotaTextField;
     private javax.swing.JTextField kewarganegaraanTextField1;

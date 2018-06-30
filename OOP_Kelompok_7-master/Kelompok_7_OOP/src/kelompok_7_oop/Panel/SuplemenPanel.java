@@ -8,8 +8,10 @@ package kelompok_7_oop.Panel;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JScrollPane;
 import kelompok_7_oop.Kelas.AnggotaRuta;
+import kelompok_7_oop.Kelas.Database;
 import kelompok_7_oop.Kelas.Suplemen;
 
 /**
@@ -20,13 +22,19 @@ public class SuplemenPanel extends javax.swing.JPanel {
    
     private  Suplemen su = new Suplemen();
     private JScrollPane mainScrollPane;
+    private AnggotaRuta art;
     /**
      * Creates new form SuplemenPanel
      */
-    public SuplemenPanel() {
+    public SuplemenPanel(JScrollPane mainScrollPane, AnggotaRuta art) {
         initComponents();
         this.mainScrollPane = mainScrollPane;
-        
+        this.art = art;
+        isiComboBox();
+    }
+    private void isiComboBox(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        pilihKegUtamaComboBox.setModel(model);
     }
  private String getSelected(ButtonGroup bg){
         for (Enumeration<AbstractButton> buttons=bg.getElements();buttons.hasMoreElements();){
@@ -338,7 +346,8 @@ public class SuplemenPanel extends javax.swing.JPanel {
         su.setBidangPekerjaan(bidangUsahaTextField.getText());
         su.setJenisJabatan(jenisPekerjaanTextField.getText());
         su.setStatJabatan(statusKddknComboBox.getSelectedItem().toString());
-     
+        
+        
     }//GEN-LAST:event_buttonNextPanelMouseClicked
 
 

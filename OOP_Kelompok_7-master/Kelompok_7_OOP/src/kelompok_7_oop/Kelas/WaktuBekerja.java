@@ -12,6 +12,20 @@ package kelompok_7_oop.Kelas;
 public class WaktuBekerja {
 
     /**
+     * @return the jamKerja
+     */
+    public JamKerja getJamKerja() {
+        return jamKerja;
+    }
+
+    /**
+     * @param jamKerja the jamKerja to set
+     */
+    public void setJamKerja(JamKerja jamKerja) {
+        this.jamKerja = jamKerja;
+    }
+
+    /**
      * @return the tambahJamKerja
      */
     public String getTambahJamKerja() {
@@ -53,7 +67,7 @@ public class WaktuBekerja {
         this.penurunanEkonomi = penurunanEkonomi;
     }
     
-    JamKerja jamKerja;
+    private JamKerja jamKerja;
     private String tambahJamKerja;
     private String siapTambahJamKerja;
     private String penurunanEkonomi;
