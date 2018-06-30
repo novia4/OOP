@@ -28,7 +28,7 @@ public class Pekerjaan {
     private String jarak;
     private String lamaPerjalanan;
     private String jenisTransportasi;
-    
+
     public Pekerjaan(){
         this.jamkerja = new JamKerja();
         this.layananPerusahaan=new FasilitasPekerjaan();
@@ -284,5 +284,6 @@ public class Pekerjaan {
     public void setJenisTransportasi(String jenisTransportasi) {
         this.jenisTransportasi = jenisTransportasi;
     }
+
 
 }
